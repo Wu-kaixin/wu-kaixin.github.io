@@ -3,11 +3,13 @@
 ## 在 GitHub 网页上改文字
 
 1. 打开 content/site.json，点击铅笔图标。
-2. 修改姓名、身份、简介、研究概述或学术档案链接；zh 是中文，en 是英文。
+2. 修改姓名、身份、简介、教育经历、研究经历、技能或学术档案链接；zh 是中文，en 是英文。
 3. 点击 Commit changes 提交 main。
 4. 在 Actions 确认 Publish research site 成功，再刷新网站。
 
 保留 JSON 的引号和逗号。网站默认只放简短的研究介绍；不上传未发表论文、实验明细、数据或内部资料。publications 中只添加已确认正式发表的论文题录和 DOI；不托管 PDF。现有 3 篇已与本人 ORCID 和 Crossref 出版元数据核对。
+
+教育经历放在 `education`，此前研究经历放在 `experience`，技能和语言放在 `skills`。每项均提供 `zh` 与 `en`。日期与机构名称按已确认的履历填写；论文年份与刊会名称以正式出版记录为准。
 
 ## 用 Cursor 修改
 
@@ -37,7 +39,7 @@ git push origin main
 
 | 文件 | 作用 |
 | --- | --- |
-| content/site.json | 姓名、简介、研究概述、已发表论文题录、Google Scholar/ORCID/GitHub 链接、正式网址 |
+| content/site.json | 姓名、简介、教育与研究经历、技能、研究概述、已发表论文题录、Google Scholar/ORCID/GitHub 链接、正式网址 |
 | tools/build.py | 中英文页面结构；需要新增栏目或页面时从这里扩展 |
 | site/assets/portfolio.css | 配色、排版与手机样式 |
 | site/assets/app.js | 概念图切换与手机菜单 |

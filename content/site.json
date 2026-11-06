@@ -27,12 +27,12 @@
   },
   "about": {
     "zh": [
-      "我是 Kaixin Wu（开心），广岛大学复杂系统科学研究室的信息学与数据科学博士研究生。",
-      "我的研究兴趣包括多智能体系统、机器人协作与人群引导，也关注这些研究如何走向实际应用。"
+      "我是 Kaixin Wu（开心），自 2026 年 4 月起在广岛大学复杂系统科学研究室攻读博士，导师为 Masaki Ogura 教授。",
+      "我拥有计算机科学硕士与软件工程学士背景，曾参与大语言模型与形式化验证、计算机视觉及人工智能部署相关研究。目前关注机器人协作与人群引导，并希望将研究用于实际问题。"
     ],
     "en": [
-      "I am Kaixin Wu, a Ph.D. student in informatics and data science at the Complex Systems Science Laboratory, Hiroshima University.",
-      "My interests include multi-agent systems, robotic cooperation and crowd guidance, as well as translating research into practical applications."
+      "I am Kaixin Wu, a Ph.D. student at the Complex Systems Science Laboratory, Hiroshima University, since April 2026, supervised by Prof. Masaki Ogura.",
+      "With an MSc in Computer Science and a bachelor’s degree in Software Engineering, my previous work spans large language models and formal verification, computer vision, and AI deployment. I now focus on robotic cooperation and crowd guidance, with an interest in practical applications."
     ]
   },
   "projects": [
@@ -106,6 +106,166 @@
       "authors": "Kaixin Wu",
       "venue": "Proceedings of ITEI 2022 · EAI, published 2023",
       "doi": "10.4108/eai.23-12-2022.2329084"
+    }
+  ],
+  "education": [
+    {
+      "period": {
+        "zh": "2026.04 — 至今",
+        "en": "Apr 2026 — Present"
+      },
+      "institution": {
+        "zh": "广岛大学",
+        "en": "Hiroshima University"
+      },
+      "qualification": {
+        "zh": "博士研究生 · 信息学与数据科学",
+        "en": "Ph.D. student · Informatics & Data Science"
+      }
+    },
+    {
+      "period": {
+        "zh": "2023.08 — 2025.12",
+        "en": "Aug 2023 — Dec 2025"
+      },
+      "institution": {
+        "zh": "曼彻斯特大学",
+        "en": "The University of Manchester"
+      },
+      "qualification": {
+        "zh": "计算机科学 · 理学硕士",
+        "en": "MSc in Computer Science"
+      }
+    },
+    {
+      "period": {
+        "zh": "2019.09 — 2023.06",
+        "en": "Sep 2019 — Jun 2023"
+      },
+      "institution": {
+        "zh": "华南理工大学广州学院",
+        "en": "Guangzhou College of South China University of Technology"
+      },
+      "qualification": {
+        "zh": "软件工程 · 学士",
+        "en": "Bachelor’s degree in Software Engineering"
+      }
+    }
+  ],
+  "experience": [
+    {
+      "period": {
+        "zh": "2025.05 — 2025.09",
+        "en": "May 2025 — Sep 2025"
+      },
+      "institution": {
+        "zh": "广岛大学",
+        "en": "Hiroshima University"
+      },
+      "role": {
+        "zh": "特殊研究生（访问研究）",
+        "en": "Special Research Student (visiting)"
+      },
+      "summary": {
+        "zh": "复杂系统科学研究室。",
+        "en": "Complex Systems Science Laboratory."
+      }
+    },
+    {
+      "period": {
+        "zh": "2023.09 — 2024.08",
+        "en": "Sep 2023 — Aug 2024"
+      },
+      "institution": {
+        "zh": "曼彻斯特大学",
+        "en": "The University of Manchester"
+      },
+      "role": {
+        "zh": "研究助理",
+        "en": "Research Assistant"
+      },
+      "summary": {
+        "zh": "结合大语言模型与形式化验证，研究代码自动修复。",
+        "en": "Research on automated code repair using large language models and formal verification."
+      }
+    },
+    {
+      "period": {
+        "zh": "2023.04 — 2023.09",
+        "en": "Apr 2023 — Sep 2023"
+      },
+      "institution": {
+        "zh": "中国科学院",
+        "en": "Chinese Academy of Sciences"
+      },
+      "role": {
+        "zh": "研究助理",
+        "en": "Research Assistant"
+      },
+      "summary": {
+        "zh": "面向复杂天气下无人机电力巡检的计算机视觉研究。",
+        "en": "Computer vision for UAV-based power infrastructure inspection in complex weather."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "label": {
+        "zh": "编程与开发",
+        "en": "Programming & development"
+      },
+      "items": {
+        "zh": [
+          "Python",
+          "Java",
+          "Spring Boot",
+          "Vue.js"
+        ],
+        "en": [
+          "Python",
+          "Java",
+          "Spring Boot",
+          "Vue.js"
+        ]
+      }
+    },
+    {
+      "label": {
+        "zh": "研究工具",
+        "en": "Research tools"
+      },
+      "items": {
+        "zh": [
+          "Jupyter",
+          "LaTeX",
+          "Cursor",
+          "PyCharm"
+        ],
+        "en": [
+          "Jupyter",
+          "LaTeX",
+          "Cursor",
+          "PyCharm"
+        ]
+      }
+    },
+    {
+      "label": {
+        "zh": "语言",
+        "en": "Languages"
+      },
+      "items": {
+        "zh": [
+          "中文（母语）",
+          "英语",
+          "日语（JLPT N1）"
+        ],
+        "en": [
+          "Chinese (native)",
+          "English",
+          "Japanese (JLPT N1)"
+        ]
+      }
     }
   ]
 }
