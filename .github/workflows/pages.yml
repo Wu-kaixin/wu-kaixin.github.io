@@ -18,7 +18,9 @@ jobs:
       - name: Validate data and local links
         run: python3 tests/check_site.py
       - name: Check browser JavaScript
-        run: node --check site/assets/app.js
+        run: |
+          node --check site/assets/app.js
+          for script in site/evacuation/assets/*.js; do node --check "$script"; done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

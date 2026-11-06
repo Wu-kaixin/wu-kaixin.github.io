@@ -24,7 +24,8 @@ def render():
     projects=''
     for i,p in enumerate(CONFIG['projects']):
         kind='transport' if p['id']=='transport' else 'crowd'
-        projects+=f'''<article class="pf-project {'reverse' if i else ''}"><div class="pf-project-art {kind}"><div class="pf-art-top"><span>{E(p['acronym'])}</span><span>0{i+1} / {t('研究概念','RESEARCH CONCEPT')}</span></div><img src="{PREFIX}assets/concept-{kind}-{LANG}.svg" alt="{t('研究主题概念示意，非实验结果','Concept illustration of the research topic, not experimental results')}" width="620" height="440" loading="lazy"><div class="pf-art-bottom">{t('研究概念示意','Research concept illustration')}<span>↗</span></div></div><div class="pf-project-copy"><span class="pf-status"><i></i>{E(c(p['status']))}</span><h3>{E(c(p['title']))}</h3><p class="pf-project-subtitle">{E(p['english_title'])}</p><p>{E(c(p['summary']))}</p></div></article>'''
+        demo = (f'<p><a class="button secondary" href="{PREFIX}evacuation/?lang={LANG}">{t("打开建筑疏散演示", "Open building evacuation demo")} →</a></p><p>{t("可交互的仿真回放 · 支持中英文", "Interactive simulation replay · Chinese and English")}</p>' if kind == 'crowd' else '')
+        projects+=f'''<article class="pf-project {'reverse' if i else ''}"><div class="pf-project-art {kind}"><div class="pf-art-top"><span>{E(p['acronym'])}</span><span>0{i+1} / {t('研究概念','RESEARCH CONCEPT')}</span></div><img src="{PREFIX}assets/concept-{kind}-{LANG}.svg" alt="{t('研究主题概念示意，非实验结果','Concept illustration of the research topic, not experimental results')}" width="620" height="440" loading="lazy"><div class="pf-art-bottom">{t('研究概念示意','Research concept illustration')}<span>↗</span></div></div><div class="pf-project-copy"><span class="pf-status"><i></i>{E(c(p['status']))}</span><h3>{E(c(p['title']))}</h3><p class="pf-project-subtitle">{E(p['english_title'])}</p><p>{E(c(p['summary']))}</p>{demo}</div></article>'''
     rel='' if LANG=='zh' else 'en/'
     other='en/' if LANG=='zh' else '../'
     body=f'''<a class="skip" href="#main">{t('跳至内容','Skip to content')}</a><header class="site-header"><div class="header-inner"><a class="brand" href="./"><img src="{PREFIX}assets/favicon.svg" width="33" height="33" alt=""><span>KAIXIN WU<small>RESEARCH & EXPLORATION</small></span></a><nav class="main-nav" id="navigation" aria-label="{t('主导航','Main navigation')}">{nav}</nav><div class="header-actions"><a class="lang-switch" href="{other}" aria-label="{t('Switch to English','切换到中文')}">{t('EN','中文')}</a><button class="menu-button" aria-expanded="false" aria-controls="navigation" aria-label="{t('打开导航','Open navigation')}">☰</button></div></div></header>
@@ -47,5 +48,5 @@ def main():
     (SITE/'.generated-pages.json').write_text('["index.html", "en/index.html"]\n')
     (SITE/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>'+SITE_URL+'</loc></url><url><loc>'+SITE_URL+'en/</loc></url></urlset>')
     (SITE/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+SITE_URL+'sitemap.xml\n')
-    print('Built 2 concise bilingual profile pages. No manuscripts, datasets or research-detail pages.')
+    print('Built 2 bilingual profile pages; preserved the standalone evacuation replay.')
 if __name__=='__main__': main()

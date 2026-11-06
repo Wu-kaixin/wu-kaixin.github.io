@@ -47,3 +47,12 @@ git push origin main
 不要直接编辑生成的 site/index.html，因为下次构建会覆盖它。需要新增页面时，可以直接告诉助手页面名称和准备公开的简短内容；先明确公开范围，再修改生成器。
 
 GitHub Pages 为正式公开版；Sites 的私人版本与 GitHub 不会自动双向同步。
+
+
+## 建筑疏散演示 / Evacuation demo
+
+经本人授权，`site/evacuation/` 公开发布 ATRIUM 100 双语静态仿真回放，包括运行回放所需的 JSON 帧和指标。此公开范围仅适用于本演示；原有未发表论文、原始数据库和内部材料规则继续适用。
+
+访问 `/evacuation/?lang=zh` 或 `/evacuation/?lang=en`；比较页为 `/evacuation/report.html`。中文与英文主页都提供入口。它是保存的原生结果回放，不是在线仿真求解服务，也不构成现实建筑安全验证。
+
+更新时替换该目录的完整静态导出内容，保留相对路径。`tools/build.py` 不覆盖此目录。提交前运行构建与检查，GitHub Actions 将完整 `site/` 发布到 Pages。无需部署 Python、Java 或数据库。
