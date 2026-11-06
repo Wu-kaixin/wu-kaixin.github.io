@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wu-kaixin.github.io/collective-horizons/sitemap.xml

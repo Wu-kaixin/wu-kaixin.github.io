@@ -1,0 +1,111 @@
+{
+  "site_url": "https://wu-kaixin.github.io/collective-horizons/",
+  "name": "Kaixin Wu",
+  "brand": "Collective Horizons",
+  "reviewed": "2026-11-06",
+  "role": {
+    "zh": "信息学与数据科学 · 博士研究生",
+    "en": "Ph.D. student · Informatics & Data Science"
+  },
+  "affiliation": {
+    "zh": "广岛大学 · 复杂系统科学研究室",
+    "en": "Hiroshima University · Complex Systems Science Lab"
+  },
+  "headline": {
+    "zh": [
+      "从局部感知，",
+      "走向群体协作。"
+    ],
+    "en": [
+      "Local perception.",
+      "Collective action."
+    ]
+  },
+  "introduction": {
+    "zh": "我关注多智能体系统中的感知与协作，研究机器人如何共同搬运未知物体，以及如何为复杂人群设计自适应引导方法。",
+    "en": "I study perception and cooperation in multi-agent systems, with a focus on cooperative robotic transport and adaptive guidance for complex crowds."
+  },
+  "about": {
+    "zh": [
+      "我是 Kaixin Wu（开心），广岛大学复杂系统科学研究室的信息学与数据科学博士研究生。",
+      "我的研究兴趣包括多智能体系统、机器人协作与人群引导，也关注这些研究如何走向实际应用。"
+    ],
+    "en": [
+      "I am Kaixin Wu, a Ph.D. student in informatics and data science at the Complex Systems Science Laboratory, Hiroshima University.",
+      "My interests include multi-agent systems, robotic cooperation and crowd guidance, as well as translating research into practical applications."
+    ]
+  },
+  "projects": [
+    {
+      "id": "transport",
+      "acronym": "DBACT",
+      "english_title": "Decentralized Boundary-Aware Cooperative Transport",
+      "title": {
+        "zh": "未知物体，如何共同搬运？",
+        "en": "Unknown objects. Coordinated transport."
+      },
+      "summary": {
+        "zh": "探索多个机器人如何在缺少物体先验形状信息的情况下，通过局部感知与协作完成搬运任务。",
+        "en": "Exploring how multiple robots can use local sensing and cooperation to transport objects without prior knowledge of their shape."
+      },
+      "status": {
+        "zh": "正在进行",
+        "en": "Ongoing research"
+      }
+    },
+    {
+      "id": "crowds",
+      "acronym": "AGD–UDC",
+      "english_title": "Adaptive Guide-Agent Deployment for Unknown Dynamic Crowds",
+      "title": {
+        "zh": "有限资源，如何引导复杂人群？",
+        "en": "Limited resources. Adaptive guidance."
+      },
+      "summary": {
+        "zh": "研究如何根据人群分布安排引导智能体，并逐步探索适应环境变化的协作引导方法。",
+        "en": "Studying how guide agents can be deployed around crowds, with the longer-term goal of adapting to changing environments."
+      },
+      "status": {
+        "zh": "正在进行",
+        "en": "Ongoing research"
+      }
+    }
+  ],
+  "profiles": [
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?hl=zh-CN&user=kzJ1vUcAAAAJ"
+    },
+    {
+      "label": "ORCID",
+      "url": "https://orcid.org/0009-0009-8963-4432"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/Wu-kaixin"
+    }
+  ],
+  "publications": [
+    {
+      "year": "2024",
+      "title": "Intelligent Inspection System for Power Insulators Based on AAV on Complex Weather Conditions",
+      "authors": "Yi Li, Yanfeng Lu, Kaixin Wu, Yuan Fang, Chaodan Zheng, Jiangang Zhang",
+      "venue": "IEEE Transactions on Applied Superconductivity, 34(8), 1–4",
+      "doi": "10.1109/TASC.2024.3465368"
+    },
+    {
+      "year": "2024",
+      "title": "Advancing Image Classification on CIFAR-10: Exploring Architectural Depth, Transfer Learning, and Innovative Computational Approaches",
+      "authors": "Kaixin Wu",
+      "venue": "2024 5th International Conference on Computer Vision, Image and Deep Learning (CVIDL), 852–857",
+      "doi": "10.1109/CVIDL62147.2024.10604269"
+    },
+    {
+      "year": "2023",
+      "title": "A Survey of Deployment of Artificial Intelligence",
+      "authors": "Kaixin Wu",
+      "venue": "Proceedings of ITEI 2022 · EAI, published 2023",
+      "doi": "10.4108/eai.23-12-2022.2329084"
+    }
+  ]
+}
