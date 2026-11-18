@@ -603,6 +603,10 @@ def ensure_git_hooks(root: Path = ROOT) -> bool:
     hooks_dir = root / '.githooks'
     if not git_dir.exists() or not hooks_dir.is_dir():
         return False
+    for hook_name in ('pre-commit', 'pre-push'):
+        hook_file = hooks_dir / hook_name
+        if hook_file.is_file():
+            hook_file.chmod(hook_file.stat().st_mode | 0o111)
     current = subprocess.run(
         ['git', 'config', '--local', '--get', 'core.hooksPath'],
         cwd=root,

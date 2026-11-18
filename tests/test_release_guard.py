@@ -41,6 +41,7 @@ def _make_minimal_sandbox(base: Path) -> Path:
         dst = repo / '.githooks' / hook
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT / '.githooks' / hook, dst)
+        dst.chmod(0o755)
 
     for tool in ('check_release.py', 'build.py', 'stage_demo.py'):
         dst = repo / 'tools' / tool
@@ -203,6 +204,7 @@ class ReleaseGuardTests(unittest.TestCase):
             subprocess.run(['git', 'init', '-b', 'main'], cwd=repo, check=True, capture_output=True)
             subprocess.run(['git', 'config', 'user.name', 'Test User'], cwd=repo, check=True)
             subprocess.run(['git', 'config', 'user.email', 'test@example.com'], cwd=repo, check=True)
+            subprocess.run(['git', 'config', 'commit.gpgsign', 'false'], cwd=repo, check=True)
             subprocess.run(['git', 'remote', 'add', 'origin', str(bare)], cwd=repo, check=True)
             ensure_git_hooks(repo)
 
