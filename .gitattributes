@@ -1,2 +1,5 @@
 *.png -text
 site/evacuation/** -text
+site/demos/** -text
+content/public_manifest.json -text
+.githooks/* text eol=lf

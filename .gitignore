@@ -1,5 +1,22 @@
+# Isolated website build output (assembled by tools/build.py)
+dist/
+
+# Auxiliary safeguards only (release guards in tools/check_release.py enforce policy)
 .openai/
 __pycache__/
+*.py[cod]
+.pytest_cache/
 .DS_Store
 *.zip
 qa/
+runs/
+results/
+experiments/
+raw/
+output/
+tmp/
+*.sqlite
+*.sqlite3
+*.db
+*.jsonl
+*.log

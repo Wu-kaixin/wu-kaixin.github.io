@@ -1,58 +1,110 @@
-# 修改个人网站
+# 维护与发布说明
 
-## 在 GitHub 网页上改文字
+## 一、仓库分工与默认隔离边界
 
-1. 打开 content/site.json，点击铅笔图标。
-2. 修改姓名、身份、简介、教育经历、研究经历、技能或学术档案链接；zh 是中文，en 是英文。
-3. 点击 Commit changes 提交 main。
-4. 在 Actions 确认 Publish research site 成功，再刷新网站。
+- **公开网站仓库**：`Wu-kaixin/wu-kaixin.github.io`（`public`，仅允许向 `main` 分支推送，通过 `.github/workflows/pages.yml` 部署 GitHub Pages）。
+- **研究工作目录与私有仓库**：原始轨迹、原生数据库（`.sqlite` 等）、完整日志、详细配置与批量实验结果默认保存在本地研究目录或已核实的私有仓库中，绝不放入本公开仓库，也不使用本仓库的其他分支或标签作为私有备份（`.gitignore` 仅作为辅助防误触措施）。
+- **已记录的公开基线与历史说明**：
+  - 当前唯一获批继续公开的研究演示为 `Atrium 100` 双语静态疏散回放（源自 `atrium100_20261106_delivery_v5 / site_v2`，16 组开发结果、15,287 帧及已有 `export_manifest.json`、`README.md`、各案例 `meta.json` 下载链接），共 272 个具体文件，逐文件 SHA-256 与字节大小锁定在 `content/public_manifest.json`。
+  - 浏览器实际接收的回放帧和指标均视为公开数据；隐藏按钮不构成数据隔离。
+  - `2026-11-06` 更早历史推送对象状态已如实记录于 `content/public_manifest.json` 的 `historical_public_records`，不宣称修改 `.gitignore` 可撤回远端历史缓存对象。
 
-保留 JSON 的引号和逗号。网站默认只放简短的研究介绍；不上传未发表论文、实验明细、数据或内部资料。publications 中只添加已确认正式发表的论文题录和 DOI；不托管 PDF。现有 3 篇已与本人 ORCID 和 Crossref 出版元数据核对。
+---
 
-教育经历放在 `education`，此前研究经历放在 `experience`，技能和语言放在 `skills`。每项均提供 `zh` 与 `en`。日期与机构名称按已确认的履历填写；论文年份与刊会名称以正式出版记录为准。
+## 二、日常修改个人主页文字
 
-## 用 Cursor 修改
+### 在 GitHub 网页上改文字
 
-```powershell
-git clone https://github.com/Wu-kaixin/collective-horizons.git
-cd collective-horizons
-```
+1. 打开 `content/site.json` 修改个人简介、教育经历、研究经历、技能或已发表论文题录（`zh` 中文、`en` 英文）。`publications` 仅填已正式发表论文与 DOI，不托管未发表稿件或实验明细。
+2. 提交到 `main` 后，GitHub Actions 会自动在独立构建目录 `dist/` 生成网页、执行发布检查并部署到 Pages。
 
-用 Cursor 打开目录，修改后执行：
+### 在本地修改与预览
 
 ```powershell
 python tools/build.py
-python tests/check_site.py
-node --check site/assets/app.js
-python -m http.server 8000 --directory site
+python tools/check_release.py --check-manifest --check-staged --check-artifact dist
+python tests/check_site.py --site-dir dist
+python -m http.server 8000 --directory dist
 ```
 
-打开 http://localhost:8000/ 预览。按 Ctrl+C 结束；检查通过后提交：
+打开 `http://localhost:8000/` 预览构建产物 `dist/`（`dist/` 为独立构建输出目录，每次构建自动清空重建，且不纳入 Git 提交）。确认无误后按具体文件暂存、提交并推送：
 
 ```powershell
-git add .
-git commit -m "Update personal website"
+git add content/site.json
+git commit -m "Update personal profile"
 git push origin main
 ```
 
+本地首次克隆后运行一次 `python tools/build.py`（或 `python tools/check_release.py --install-hooks`）即可自动启用 `.githooks/pre-commit` 与 `.githooks/pre-push` 守卫：
+- 推送前自动扫描**全部待推送的新提交**及目标分支（非 `main` 分支直接拦截）。
+- 若混入未列入 `content/public_manifest.json` 的文件，或清单内文件被新实验覆盖导致 SHA-256 变化，提交、构建、推送和 CI 部署前检查均会拒绝并指出具体文件。
+
+---
+
+## 三、如何单独发布一个新演示（不连带公开整批实验数据）
+
+当研究目录中完成了多组新实验，但仅希望公开其中某一个新演示（或某一个指定案例）时，按以下步骤操作，避免复制整个实验目录：
+
+1. **在研究目录单独导出展示包**（保持原始实验目录只读，不包含 `.sqlite`、原始 CSV 轨迹或完整日志）。
+2. **使用 `tools/stage_demo.py` 先做干跑预览（不写入文件）**，若是多案例对比导出包，必须通过 `--runs` 指定获准公开的具体案例 ID，未指定的同批案例及哈希会被自动剔除：
+
+```powershell
+python tools/stage_demo.py `
+  --demo-id atrium-case-demo `
+  --mount demos/atrium-case `
+  --from-export C:\path\to\exported_demo_dir `
+  --runs internal_cfs_v3 `
+  --origin-version "study_tag / export_v1" `
+  --title-zh "单案例疏散演示" `
+  --title-en "Single-case evacuation demo"
+```
+
+   若是自定义静态网页演示（无 `manifest.json`），则用 `--files index.html assets/demo.js data/summary.json` 明确逐个列出文件，禁止使用 `runs/**`、`results/**` 等通配符。
+   如需在首页研究卡片同时增加入口按钮，可附加 `--project-id crowds`（或 `transport`）及 `--homepage-label-zh` / `--homepage-label-en`。
+
+3. **核对预览文件列表无误后，显式加 `--update-manifest` 写入并登记 SHA-256**：
+
+```powershell
+python tools/stage_demo.py `
+  --demo-id atrium-case-demo `
+  --mount demos/atrium-case `
+  --from-export C:\path\to\exported_demo_dir `
+  --runs internal_cfs_v3 `
+  --origin-version "study_tag / export_v1" `
+  --title-zh "单案例疏散演示" `
+  --title-en "Single-case evacuation demo" `
+  --update-manifest
+```
+
+4. **构建独立产物 `dist/` 并执行发布检查与预览**：
+
+```powershell
+python tools/build.py
+python tools/check_release.py --check-manifest --check-artifact dist
+python tests/check_site.py --site-dir dist
+python -m http.server 8000 --directory dist
+```
+
+5. **仅暂存该新演示目录与公开清单，提交并推送 `main`**：
+
+```powershell
+git add site/demos/atrium-case content/public_manifest.json
+git commit -m "Publish approved atrium-case demo"
+git push origin main
+```
+
+---
+
 ## 文件分工
 
-| 文件 | 作用 |
+| 文件 / 目录 | 作用 |
 | --- | --- |
-| content/site.json | 姓名、简介、教育与研究经历、技能、研究概述、已发表论文题录、Google Scholar/ORCID/GitHub 链接、正式网址 |
-| tools/build.py | 中英文页面结构；需要新增栏目或页面时从这里扩展 |
-| site/assets/portfolio.css | 配色、排版与手机样式 |
-| site/assets/app.js | 概念图切换与手机菜单 |
-
-不要直接编辑生成的 site/index.html，因为下次构建会覆盖它。需要新增页面时，可以直接告诉助手页面名称和准备公开的简短内容；先明确公开范围，再修改生成器。
-
-GitHub Pages 为正式公开版；Sites 的私人版本与 GitHub 不会自动双向同步。
-
-
-## 建筑疏散演示 / Evacuation demo
-
-经本人授权，`site/evacuation/` 公开发布 ATRIUM 100 双语静态仿真回放，包括运行回放所需的 JSON 帧和指标。此公开范围仅适用于本演示；原有未发表论文、原始数据库和内部材料规则继续适用。
-
-访问 `/evacuation/?lang=zh` 或 `/evacuation/?lang=en`；比较页为 `/evacuation/report.html`。中文与英文主页都提供入口。它是保存的原生结果回放，不是在线仿真求解服务，也不构成现实建筑安全验证。
-
-更新时替换该目录的完整静态导出内容，保留相对路径。`tools/build.py` 不覆盖此目录。提交前运行构建与检查，GitHub Actions 将完整 `site/` 发布到 Pages。无需部署 Python、Java 或数据库。
+| `content/site.json` | 个人简介、教育与研究经历、技能、研究概述、已发表论文题录与学术档案链接 |
+| `content/public_manifest.json` | 唯一公开研究素材白名单（逐文件路径、字节数、SHA-256 哈希与版本来源记录） |
+| `tools/build.py` | 在独立构建目录 `dist/` 生成中英文主页，并严格按 `public_manifest.json` 导入研究素材 |
+| `tools/stage_demo.py` | 从外部导出目录按单案例或明确文件列表导入新演示，并更新 `public_manifest.json` |
+| `tools/check_release.py` | 提交前、推送前（检查全部待推送提交及分支）与部署前产物一致性检查 |
+| `tests/check_site.py` | 检查 `dist/` 页面链接、Atrium 100 的 16 组回放与保留的下载链接 |
+| `site/assets/` | 个人主页样式、概念示意图与前端交互脚本 |
+| `site/evacuation/` | 已获批保留的 Atrium 100 静态演示源文件（受 `public_manifest.json` 哈希保护） |
+| `dist/` | 独立网站构建产物目录（Git 忽略，GitHub Actions 仅上传此目录至 Pages） |
