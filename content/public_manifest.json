@@ -27,6 +27,12 @@
         "summary": "Approved Atrium 100 bilingual static replay baseline (272 presentation files under site/evacuation/, exported from atrium100_20261106_delivery_v5 / site_v2)."
       },
       {
+        "commit": "a49869fb55179560d485f9d1528fdd2e243efd0c",
+        "date": "2026-11-23",
+        "ref_status": "removed from the current site by revert 36adab0; the original commit remains in public Git history",
+        "summary": "A qualitative guide-deployment research update was published and then removed from the current pages. Reverting the commit does not erase that historical commit."
+      },
+      {
         "commits": [
           "c0d694391e",
           "a33d24630f",
