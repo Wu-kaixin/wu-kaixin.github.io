@@ -2,6 +2,8 @@
 (function(global){
   'use strict';
   const zh={
+    'Research update':'研究进展','studyPage':'Atrium 100 · 研究进展',
+    'studyHeading':'引导代理换位时，能持续覆盖人群边界吗？','Interactive replay':'交互回放',
     'PEDESTRIAN DYNAMICS LAB':'行人动力学实验室','/ Two-storey evacuation':'/ 双层建筑疏散',
     'Model & map notes':'模型与地图说明','EGRESS STRATEGY':'疏散方案','PEDESTRIAN MODEL':'行人模型',
     'FOLLOW GROUP':'跟随群体','FLOOR VIEW':'楼层视图','Reset view':'重置视图',
@@ -116,6 +118,12 @@
     if(!doc)return;
     if(doc.documentElement)doc.documentElement.lang=language==='zh'?'zh-CN':'en';
     if(doc.querySelectorAll){
+      const pageQuery = new URLSearchParams({lang: language});
+      const selectedRun = new URLSearchParams(global.location?.search || '').get('run');
+      if (selectedRun) pageQuery.set('run', selectedRun);
+      for (const link of doc.querySelectorAll('a[data-demo-link]')) {
+        link.search = pageQuery.toString();
+      }
       for(const node of doc.querySelectorAll('[data-i18n]')){
         if(node.__atriumEnglish===undefined)node.__atriumEnglish=node.textContent;
         node.textContent=language==='en'?node.__atriumEnglish:text(node.getAttribute('data-i18n'));

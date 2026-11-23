@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="studyPage">Atrium 100 · Research update</title>
+  <link rel="stylesheet" href="assets/viewer.css">
+  <noscript><style>html[lang] .research-copy[lang] { display: block } #language { display: none }</style></noscript>
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html" data-demo-link aria-label="Atrium 100">A<span>100</span></a>
+    <div>
+      <p class="eyebrow" data-i18n="PEDESTRIAN DYNAMICS LAB">PEDESTRIAN DYNAMICS LAB</p>
+      <p class="research-brand">Atrium 100</p>
+    </div>
+    <div class="header-end">
+      <button id="language" class="language-switch" type="button" aria-label="Switch to Chinese">中文</button>
+    </div>
+  </header>
+  <main class="research-main">
+    <nav class="research-nav" aria-label="Atrium 100">
+      <a href="index.html" data-demo-link data-i18n="Interactive replay">Interactive replay</a>
+      <a href="report.html" data-demo-link data-i18n="Comparison &amp; audit">Comparison &amp; audit</a>
+    </nav>
+    <article class="research-story">
+      <p class="research-date"><span data-i18n="Research update">Research update</span> · <time datetime="2026-11-23">2026-11-23</time></p>
+      <h1 data-i18n="studyHeading">Can guides keep the crowd boundary covered as they move?</h1>
+      <div class="research-copy" lang="en">
+        <p class="research-intro">The Atrium 100 replays show a two-storey evacuation recorded on November 6. A separate simulation study examined how guides use local observations to find moving groups and messages from nearby guides to choose positions along each group’s boundary.</p>
+        <h2>What happened when a group split?</h2>
+        <p>In the tested runs, a rule that used other guides’ announced destinations met the requirements for finding people, maintaining clearance and reaching the required average boundary coverage in the final part of the run. Compared with the earlier rule under the same motion conditions, it left more of the boundary uncovered over time. Coverage took longer to recover after the split, and the guides travelled farther.</p>
+        <h2>What did the recorded decisions reveal?</h2>
+        <p>In the split scenario without a communication outage, the planned positions would have covered slightly more of the boundary than the earlier rule’s targets. The guides’ actual positions covered less over the course of the run.</p>
+        <p>The tested implementation sometimes dropped a neighbour’s message that it would hold position. Rechecking the saved histories after fixing this produced the same movement commands, destinations and broadcasts. This check used existing records and awaits independent review.</p>
+        <h2>What remains to be tested?</h2>
+        <p>The proposed next step is to check whether guides can occupy their chosen positions at the same time and how much coverage they lose while moving there. The design still awaits implementation and testing.</p>
+      </div>
+      <div class="research-copy" lang="zh-CN">
+        <p class="research-intro">Atrium 100 回放展示了 11 月 6 日记录的双层建筑疏散过程。在另一组仿真中，引导代理靠局部观测寻找移动的人群，再根据附近代理发来的消息，决定自己应站在人群边界的哪个位置。</p>
+        <h2>人群分开后，覆盖情况如何？</h2>
+        <p>把同伴通报的目标站位纳入分配约束后，引导代理在受测回合中都达到了人员发现、身体净距和末段平均边界覆盖的要求。与相同运动条件下的原分配规则相比，新规则在全程累计漏掉的边界更多，人群分开后恢复覆盖更慢，引导代理也走得更远。</p>
+        <h2>复查已有决策记录，发现了什么？</h2>
+        <p>在未设置通信中断的人群分裂场景中，如果按选定的目标位置计算，新规则能覆盖的边界比原规则略多。按引导代理实际站到的位置计算，整个回合覆盖到的边界反而更少。</p>
+        <p>受测版本有时会漏记同伴发来的“留在原位”消息。修复后逐步重放已有记录，引导代理给出的移动指令、目标站位和广播内容都与修复前相同。这次复查使用的是既有记录，仍待独立复核。</p>
+        <h2>接下来要检验什么？</h2>
+        <p>下一步拟检查多个引导代理能否同时站到各自选定的位置，并估算它们换位途中会留下多少覆盖空档。这项设计尚待实现和测试。</p>
+      </div>
+    </article>
+  </main>
+  <script src="assets/i18n.js"></script>
+</body>
+</html>

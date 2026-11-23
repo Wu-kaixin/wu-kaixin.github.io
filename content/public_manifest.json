@@ -67,11 +67,17 @@
         "recorded_cases": 16,
         "declared_frames": 15287,
         "chunk_frames": 64,
-        "baseline_commit": "788efc21bec976bf09fa7045bf89a45e24098b14"
+        "baseline_commit": "788efc21bec976bf09fa7045bf89a45e24098b14",
+        "presentation_update": {
+          "date": "2026-11-23",
+          "page": "evacuation/research.html",
+          "scope": "Bilingual qualitative summary of a separate guide deployment comparison, a review of recorded decisions, and a proposed follow-up."
+        }
       },
       "entry_pages": [
         "evacuation/index.html",
-        "evacuation/report.html"
+        "evacuation/report.html",
+        "evacuation/research.html"
       ],
       "preserved_downloads": [
         "evacuation/export_manifest.json",
@@ -103,8 +109,8 @@
         {
           "source": "site/evacuation/assets/i18n.js",
           "target": "evacuation/assets/i18n.js",
-          "bytes": 16669,
-          "sha256": "4c29c17ed5f942d3b4a1541c6680b0aff83f3b0743a939c26cca10e9e1b5ce4d"
+          "bytes": 17204,
+          "sha256": "97437010ce585d926c9a5ee94d1fe74ab7b549ebdb246228061a72a320ea9153"
         },
         {
           "source": "site/evacuation/assets/site_loader.js",
@@ -121,8 +127,8 @@
         {
           "source": "site/evacuation/assets/viewer.css",
           "target": "evacuation/assets/viewer.css",
-          "bytes": 12348,
-          "sha256": "346cff6574db41514edb2450eedf6536592d4dac35423900672e1bf1dbb1c370"
+          "bytes": 14050,
+          "sha256": "f86e4766b168cb76d16ad472b29c7016f7f94c6f488fe45b349b406226529836"
         },
         {
           "source": "site/evacuation/assets/viewer.js",
@@ -1711,8 +1717,8 @@
         {
           "source": "site/evacuation/index.html",
           "target": "evacuation/index.html",
-          "bytes": 11039,
-          "sha256": "eea5e3198953aa8591983ac16229e5f99e7e9a7b943055398c05508369b36646"
+          "bytes": 11417,
+          "sha256": "79cdfab6f3413c5bb5c3eb41d20b23e6ee0795b831678005c609cb1b8bd364d0"
         },
         {
           "source": "site/evacuation/manifest.json",
@@ -1723,8 +1729,14 @@
         {
           "source": "site/evacuation/report.html",
           "target": "evacuation/report.html",
-          "bytes": 1697,
-          "sha256": "38393df53bb33854fdcb19a85067bef7149cc84d74e290495d7f8ebd3281ad38"
+          "bytes": 1783,
+          "sha256": "f78e1b0a7364e09a93cd0aa431a02c0b779368d44a545c64412ba7c5840a7227"
+        },
+        {
+          "source": "site/evacuation/research.html",
+          "target": "evacuation/research.html",
+          "bytes": 4713,
+          "sha256": "0059639c2468ce46c4b7558b0041515289cebca646e35013938b465c516bd42b"
         }
       ]
     }
