@@ -109,8 +109,8 @@
         {
           "source": "site/evacuation/assets/i18n.js",
           "target": "evacuation/assets/i18n.js",
-          "bytes": 16669,
-          "sha256": "4c29c17ed5f942d3b4a1541c6680b0aff83f3b0743a939c26cca10e9e1b5ce4d"
+          "bytes": 17300,
+          "sha256": "9835d1ce4746b00908c85aba00826cf17f57769148f551c10fd223f4fe53be7c"
         },
         {
           "source": "site/evacuation/assets/site_loader.js",
@@ -127,14 +127,14 @@
         {
           "source": "site/evacuation/assets/viewer.css",
           "target": "evacuation/assets/viewer.css",
-          "bytes": 12348,
-          "sha256": "346cff6574db41514edb2450eedf6536592d4dac35423900672e1bf1dbb1c370"
+          "bytes": 12752,
+          "sha256": "80e5a31d01bac4013e3a4b7f22c803a250fdbaabcf8f37d5edf49f9fc9a9ad6c"
         },
         {
           "source": "site/evacuation/assets/viewer.js",
           "target": "evacuation/assets/viewer.js",
-          "bytes": 25178,
-          "sha256": "eb4ebf37eb064e9d6dd30dc9432a922258e2b6901f8a9dfc11cc4a6ee9bcd0db"
+          "bytes": 29596,
+          "sha256": "835139bd7772ae1787347653b087602dbb569b22ddf63a0762facf7edeb936e1"
         },
         {
           "source": "site/evacuation/data/external_avm/frames_0000.json",
@@ -1717,8 +1717,8 @@
         {
           "source": "site/evacuation/index.html",
           "target": "evacuation/index.html",
-          "bytes": 11039,
-          "sha256": "eea5e3198953aa8591983ac16229e5f99e7e9a7b943055398c05508369b36646"
+          "bytes": 11546,
+          "sha256": "6af2743d8328d06925eebc2043be81ceac3c69ed990115bae17c053269701ef3"
         },
         {
           "source": "site/evacuation/manifest.json",

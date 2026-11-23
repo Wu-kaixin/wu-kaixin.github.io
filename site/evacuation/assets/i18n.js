@@ -12,7 +12,7 @@
     'OBSERVED SAFE':'已观测到达安全区','ACTIVE PEOPLE':'场内人员','NEW ARRIVALS':'新增入场人员',
     'PHYSICAL GUIDES':'场内引导代理','SIMULATION TIME':'仿真时间','0 pending outside':'0 人等待入场',
     '2 entrances / 4 final exits':'2 个入口 / 4 个最终出口','2 emergency storey exits':'2 个楼层应急出口',
-    'LAYERS':'图层','Trails':'运动轨迹','Enclosure':'包围范围','Following':'跟随关系','Guide roles':'引导角色',
+    'LAYERS':'图层','Trails':'运动轨迹','Enclosure':'包围范围','Crowd boundary':'人群边界','Following':'跟随关系','Guide roles':'引导角色',
     'Step 1 sites':'步骤 1 部署点','Room labels':'房间标注','Stair transit':'楼梯通行',
     'Pause':'暂停','Play':'播放','Back to start':'回到起点','Follow live':'跟随实时进度',
     'Guide behavior':'引导策略','Evidence & guide behavior':'结果依据与引导策略','Expand for model scope and results':'展开查看模型范围与结果',
@@ -37,8 +37,8 @@
     'Workshop':'工坊','Meeting suite':'会议套间','Project studio':'项目工作室','Exhibition room':'展览室',
     'Teaching laboratory':'教学实验室','Design studio':'设计工作室','Collaboration room':'协作室','Training room':'培训室',
     'Auditorium':'礼堂','Quiet study':'安静自习室','Conference room':'会议室','Multipurpose hall':'多功能厅',
-    'ENTRY':'入口','EMERGENCY STAIR':'应急疏散楼梯','CIRCULATION':'通行楼梯','SAFE · GRADE':'地面室外安全区','SAFE':'安全区',
-    'WEST CONCOURSE':'西侧大厅','EAST CONCOURSE':'东侧大厅',
+    'ENTRY':'入口','EMERGENCY STAIR':'应急疏散楼梯','CIRCULATION':'通行楼梯','SAFE · GRADE':'地面室外安全区','SAFE':'安全区','GRADE':'室外',
+    'WEST CONCOURSE':'西侧大厅','EAST CONCOURSE':'东侧大厅','ATRIUM':'中庭','PedPy areas':'PedPy 测量区','JuPedSim walkable polygon':'JuPedSim 可走多边形','Vadere topography':'Vadere 地形','Recorded enclosure —':'已记录包围比例 —','Recorded enclosure':'已记录包围比例','boundaryNote':'虚线边：3 米内没有引导。人员相距超过 6 米时分成两段轮廓。空心圆是已保存的部署点，并连到当前引导位置。',
     'Guide':'引导代理','Lead':'领航','Ahead':'前导','Tail':'后卫','Relay':'接应',
     'autonomous':'自主疏散','deploy':'部署','enclose':'包围','compress':'压缩队形','passage':'沿路疏导','release':'退出引导','visit / egress':'访问 / 疏散',
     'Awaiting native frames':'等待原生仿真数据','Finished':'已结束','COMPLETE':'全部完成','INCOMPLETE':'尚未完成','EXPERIMENT_ERROR':'程序错误',
@@ -74,6 +74,7 @@
     ['nonnegative recorded gaps','记录的间隙均非负'],['FAIL — contact or unresolved clearance retained','未通过 — 保留接触或未决间隙'],
     ['Strict pass: true','严格验收：通过'],['Strict pass: false','严格验收：未通过'],
     ['Heading observer mismatches: ','朝向观测不一致数：'],['Native remaining: ','原生残留实体数：'],
+    [' · mean human speed ',' · 行人平均速度 '],[' m/s · peak concourse density ',' 米/秒 · 大厅峰值密度 '],[' p/m² · guides excluded. ',' 人/平方米 · 不含引导代理。'],
     ['Stop request failed: ','停止请求失败：'],['Replay load failed: ','回放加载失败：'],
     ['Replay data failed to load: ','回放数据加载失败：'],['Loading replay data','正在加载回放数据'],
     ['Loading replay','正在加载回放'],['Guide marker','引导标记'],['Visitors','新增访客']
@@ -88,7 +89,7 @@
     if(language==='en')return input;
     if(Object.prototype.hasOwnProperty.call(zh,input))return zh[input];
     let match;
-    if((match=input.match(/^(\d+) pending · (\d+) requested$/)))return `${match[1]} 人待入场 · 共请求 ${match[2]} 人`;
+    if((match=input.match(/^Recorded enclosure (\d+)%$/)))return `已记录包围比例 ${match[1]}%`;
     if((match=input.match(/^(\d+) observed safe$/)))return `已观测到达安全区：${match[1]}`;
     if((match=input.match(/^G (\d+) · U (\d+) · stairs (\d+)$/)))return `一层 ${match[1]} · 二层 ${match[2]} · 楼梯 ${match[3]}`;
     if((match=input.match(/^Source closed at ([\d.]+) s · pending visitors retained$/)))return `入口在 ${match[1]} 秒关闭 · 待入场访客继续保留`;
