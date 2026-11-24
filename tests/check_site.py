@@ -78,9 +78,29 @@ def verify_built_site(site_dir: Path, root: Path = ROOT) -> None:
                 'evacuation/?lang=',
             ):
                 assert any(required in link for link in page.links), (path, required)
+            lang = 'en' if path.parent.name == 'en' else 'zh'
+            prefix = '../' if lang == 'en' else './'
+            atlas_link = f'{prefix}demos/evacuation-atlas/?lang={lang}'
+            previous_link = f'{prefix}evacuation/?lang={lang}'
+            assert page.links.index(atlas_link) < page.links.index(previous_link)
 
     for forbidden in ('downloads', 'data', 'evidence', 'research', 'resources', 'research-approach'):
         assert not (site_dir / forbidden).exists(), f'Forbidden root directory in built site: {forbidden}'
+
+    atlas = next(d for d in manifest['demos'] if d['id'] == 'evacuation-atlas')
+    atlas_dir = site_dir / atlas['mount_prefix']
+    catalog = json.loads((atlas_dir / 'catalog.json').read_bytes())
+    clips = catalog['clips']
+    assert len({c['id'] for c in clips}) == len(clips) == atlas['source_version']['recorded_cases']
+    assert all(c['file'] == f"clips/{c['id']}.json" and (atlas_dir / c['file']).is_file() for c in clips)
+    topics = {s['id'] for s in catalog['scenes'] if s['section'] == 'behavior'}
+    osm_topics = {'obstacles','corner','corners','bottleneck','bottlenecks','lanes','single','routes','journey'}
+    assert len(topics) == 17 and osm_topics <= topics
+    jps = {'cfs','cfs_v1','cfs_v3','avm','gcfm','sfm','warp'}
+    for topic in topics:
+        for layout in (range(3) if topic == 'obstacles' else range(1)):
+            available = {c['model'] for c in clips if c['scene'] == topic and c['layout'] == layout and not c.get('attempt')}
+            assert available == (jps | {'osm'} if topic in osm_topics else jps), (topic, layout)
 
     # Verify preserved Atrium 100 baseline replay, comparison page, and download links.
     atrium_entries = [d for d in manifest['demos'] if d['id'] == 'atrium100']

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#133f42"><title>Atrium 100 · Evacuation Atlas</title>
+  <link rel="icon" href="./assets/atrium.svg">
+  <link rel="stylesheet" href="./assets/atlas.css"><script type="module" src="./assets/atlas.js"></script>
+</head>
+<body>
+  <header class="mast"><div class="mast-inner">
+    <a class="brand" id="home" href="./"><span class="brand-emblem" aria-hidden="true">A</span><span>Atrium <b>100</b></span></a>
+    <nav id="modes" aria-label="Views"><button data-mode="building" data-word="building" aria-pressed="true"></button><button data-mode="behavior" data-word="behavior"></button><button data-mode="compare" data-word="compare"></button></nav>
+    <div class="mast-tools"><button id="help" data-word="help"></button><button id="lang"></button></div>
+  </div></header>
+  <main>
+    <section class="heading"><div><p id="kicker"></p><h1 id="scene-title"></h1><p id="deck"></p></div>
+      <div class="scene-options"><label class="scene-picker"><span data-word="scene"></span><select id="scene"></select></label><a id="outcome-jump" href="#comparison-results" hidden></a></div>
+    </section>
+    <div class="workspace" id="work">
+      <section class="map-card" id="map-card">
+        <div class="map-toolbar"><div class="choices">
+          <label><span id="model-label" data-word="model"></span><select id="model"></select></label>
+          <label id="second-model-wrap" hidden><span>B</span><select id="model-b"></select></label>
+          <label id="floor-wrap" hidden><span data-word="floor"></span><select id="floor"></select></label>
+        </div><div class="map-actions">
+          <button id="layout" data-word="layout" hidden></button><button id="layers" aria-expanded="false" data-word="layers"></button>
+          <button class="icon-btn" id="expand" data-tip="expand"><span aria-hidden="true">⛶</span></button>
+        </div></div>
+        <div class="stage" id="stage">
+          <div class="canvas-panels" id="panels"><div class="pane"><canvas id="map-a" tabindex="0"></canvas><span id="tag-a" class="pane-tag" hidden></span></div><div class="pane" id="pane-b" hidden><canvas id="map-b" tabindex="0"></canvas><span id="tag-b" class="pane-tag"></span></div></div>
+          <div id="floor-tag" class="floor-tag"></div><div class="compass" aria-hidden="true">↑ <b>N</b></div>
+          <div id="phase" class="phase-tag" hidden></div>
+          <div class="zoom"><button id="zoom-out" data-tip="zoomOut">−</button><button id="fit" data-tip="fit">100%</button><button id="zoom-in" data-tip="zoomIn">+</button></div>
+          <div class="notice" id="message" role="status" hidden></div>
+        </div>
+        <div class="transport"><button id="play" class="play" data-tip="play">▶</button><button id="restart" class="icon-btn" data-tip="restart">↺</button><output id="time">00:00</output><input id="timeline" type="range" min="0" max="1" value="0" step="any"><output id="end">00:00</output><select id="speed"><option>1×</option><option>2×</option><option>4×</option><option>8×</option></select></div>
+        <div class="map-foot"><span id="scale"></span><label><span data-word="camera"></span><select id="camera"></select></label></div>
+        <div class="layer-sheet" id="layer-sheet" hidden><h3 data-word="layers"></h3><div id="toggles"></div></div>
+      </section>
+      <aside class="sidebar">
+        <section class="panel progress"><h2 data-word="progress"></h2><div id="readings"></div><a id="compare-highlight" href="#comparison-results" hidden></a></section>
+        <section class="panel" id="flow-panel"><h2 data-word="byExit"></h2><div id="exit-list"></div></section>
+        <section class="panel legend-panel"><h2 data-word="legend"></h2><div id="legend"></div></section>
+        <details class="panel metrics-panel" id="metrics" hidden><summary data-word="analysis"></summary><div id="motion"></div></details>
+      </aside>
+    </div>
+    <section id="comparison-results" class="outcomes" aria-labelledby="outcome-heading" hidden>
+      <h2 id="outcome-heading"></h2><p id="match-note" hidden></p>
+      <div class="outcomes-grid"><div class="curve-box">
+        <h3 id="curve-title"></h3><div class="curve-key"><span id="curve-a"></span><span id="curve-b"></span></div>
+        <div class="curve-wrap"><canvas id="clearance-curve" role="img"></canvas><div class="curve-rail"><i id="curve-position"></i></div></div><p id="curve-axis"></p>
+      </div><div class="outcome-table-wrap"><table id="outcome-table"></table></div></div>
+      <details><summary id="measure-method"></summary><p id="measure-description"></p></details>
+    </section>
+    <section class="notes"><div><span id="engine"></span><span class="note-dot">·</span><span id="recording"></span></div><label id="revision-wrap" hidden><span data-word="revision"></span> <select id="revision"></select></label></section>
+    <output id="performance" hidden></output>
+  </main>
+  <dialog id="info"><div class="dialog-top"><h2 data-word="help"></h2><button id="close" class="icon-btn" data-tip="close">×</button></div><p data-word="helpBody"></p><h3 data-word="gestures"></h3><p data-word="gesturesBody"></p><h3 data-word="sources"></h3><div id="refs"></div></dialog>
+</body></html>

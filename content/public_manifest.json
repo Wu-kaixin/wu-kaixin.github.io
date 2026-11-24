@@ -48,6 +48,1249 @@
   },
   "demos": [
     {
+      "id": "evacuation-atlas",
+      "title": {
+        "zh": "建筑疏散与行人行为图集",
+        "en": "Evacuation and Pedestrian Behavior Atlas"
+      },
+      "mount_prefix": "demos/evacuation-atlas",
+      "source_version": {
+        "origin_export": "Evacuation Atlas 2026-11-24",
+        "recorded_cases": 193
+      },
+      "entry_pages": [
+        "demos/evacuation-atlas/index.html"
+      ],
+      "preserved_downloads": [],
+      "files": [
+        {
+          "source": "site/demos/evacuation-atlas/assets/atlas.css",
+          "target": "demos/evacuation-atlas/assets/atlas.css",
+          "bytes": 15261,
+          "sha256": "211be24c55fe5bdfc13819ba30260e92c1c670821555e22cf0b0662befb7878e"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/assets/atlas.js",
+          "target": "demos/evacuation-atlas/assets/atlas.js",
+          "bytes": 24250,
+          "sha256": "7b933609571fc69928be0e0ee2b00959dda362d59f3a65312505d157bb7a25cd"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/assets/atrium.svg",
+          "target": "demos/evacuation-atlas/assets/atrium.svg",
+          "bytes": 195,
+          "sha256": "1c88b47e926561f20a56ad81d926910837c8acb9dc2996818f2b8ad24a41d2a6"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/assets/comparison.js",
+          "target": "demos/evacuation-atlas/assets/comparison.js",
+          "bytes": 9629,
+          "sha256": "59b9502e3b0774b4bfe057724ac0ab467f439de9335fdec2b9424d7c0e9b74f4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/assets/map.js",
+          "target": "demos/evacuation-atlas/assets/map.js",
+          "bytes": 11509,
+          "sha256": "7495d89ce7f81424a4720d0eb5134e5236e879fa5a4a1e3cdb9d3e8c1529f85a"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/assets/replay.js",
+          "target": "demos/evacuation-atlas/assets/replay.js",
+          "bytes": 4536,
+          "sha256": "517ae8063587c40ced9d9f346c2ecdcbb4dddd71c23054c0e9a0e2f19bdbd8b8"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/assets/words.js",
+          "target": "demos/evacuation-atlas/assets/words.js",
+          "bytes": 9137,
+          "sha256": "da359ce2dc500e8d944642b394dbe4443b5f93347174fd85c61529c632e0d304"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/catalog.json",
+          "target": "demos/evacuation-atlas/catalog.json",
+          "bytes": 78833,
+          "sha256": "f076f7682f241abd8450bf2756eda11a06a8adce8a8e93e5fbdc9700ff8c58ee"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-bottleneck-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-bottleneck-gcfm-0.json",
+          "bytes": 41316,
+          "sha256": "ed484602bd93761ec1a8bb772cf5b1d4ac76082decee65f8f972c27016269247"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-bottlenecks-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-bottlenecks-gcfm-0.json",
+          "bytes": 61245,
+          "sha256": "474be771c2d49da8ba090fdd2f4e3fd7413e6009818d6bad8713ee23fac7be86"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-corner-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-corner-gcfm-0.json",
+          "bytes": 90073,
+          "sha256": "f7c59f01c72c2d3750e6ce71bb595e301d4d2c2909969d074a1be2b4ac8e641d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-corners-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-corners-gcfm-0.json",
+          "bytes": 86248,
+          "sha256": "91451b9f62055211655bf177fd316e31d33cbfb048a3b52ac774b71288becbde"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-inflow-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-inflow-gcfm-0.json",
+          "bytes": 116397,
+          "sha256": "ac0513a8bd053ad8e1c6f52bee03b13a46075e185af7fdb25f222dbb6cce400f"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-journey-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-journey-gcfm-0.json",
+          "bytes": 224224,
+          "sha256": "6dc96a637292cf935567e4103ef0846a37d9dc498e8251bef1d8730096a636d7"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-lanes-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-lanes-gcfm-0.json",
+          "bytes": 138367,
+          "sha256": "9bda31c91f38b88dec3d87edea16156a4c42fd7ac7cffeb5a0679e399459cb30"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-obstacles-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-obstacles-gcfm-0.json",
+          "bytes": 80190,
+          "sha256": "4d2183b8af72da8be0840980f4dc5e9157af58dcaa9b6e2d93998bd9cbc70ce0"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-obstacles-gcfm-1.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-obstacles-gcfm-1.json",
+          "bytes": 134939,
+          "sha256": "4571c62bd47909ebe74ab4010c949717001ae579a5c5e7f97dd2a524af5bf1be"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-queue-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-queue-gcfm-0.json",
+          "bytes": 247073,
+          "sha256": "5493eb0742ce6288810ab2264569abbce5b195b1486cd9c0b973646a493d4b00"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-routes-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-routes-gcfm-0.json",
+          "bytes": 82444,
+          "sha256": "be0b0c44fdd71ca4845828176bc26f493a4c9a26215ed61c0adf1e68a1928b98"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/behavior-early1-split-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/behavior-early1-split-gcfm-0.json",
+          "bytes": 130625,
+          "sha256": "95522db86782eabab5a3a655398d3438e88edf3e0d052c5de1f33119fe28c7a2"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-avm-0.json",
+          "bytes": 82789,
+          "sha256": "494a0a4342471027e245aa3d2a111d962b1d032b7e010eb37d1a1a9c1b46f838"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-cfs-0.json",
+          "bytes": 72831,
+          "sha256": "d7bd1821dec73a6efa31e7b8aa83c0edcd03072147daf277ab40231880d4926f"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-cfs_v1-0.json",
+          "bytes": 72834,
+          "sha256": "3cab729a7547e050fef6d5341bd510775bc256b2f1c4ad9a740359b7e617ab9d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-cfs_v3-0.json",
+          "bytes": 71154,
+          "sha256": "3469ef45106f83cc4243dea425564f024073fbf103b15b156140bd5cf184ee8f"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-gcfm-0.json",
+          "bytes": 200077,
+          "sha256": "a4c25783b6c89ff400a14aaa1f6b29c985e5f5e0f89b390e4db9f66980ae1fe0"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-osm-0.json",
+          "bytes": 419881,
+          "sha256": "adf794dbe211d5333f1887ff4eb86a060a350ef4ca337c3e201fe716bdda4781"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-sfm-0.json",
+          "bytes": 68029,
+          "sha256": "c50dd4c61a26ffb422e103e5704c8107b1cbf05ad25536ae9042f8df4132697e"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottleneck-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/bottleneck-warp-0.json",
+          "bytes": 71528,
+          "sha256": "e28dd93f571885ee4b4d4c8c53feae8e7b93d58a6e1bc39e8634046d6508e862"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-avm-0.json",
+          "bytes": 123882,
+          "sha256": "df0c185c902d88567566a6250d42912388f37eff5af0e7c1677f9bc469295fc8"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-cfs-0.json",
+          "bytes": 115888,
+          "sha256": "e1934b9a32fa68d5a9e737e43ee0ed38d51adbe06dcd9be134bdbe806e272139"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-cfs_v1-0.json",
+          "bytes": 115891,
+          "sha256": "d44fd0fb1b90f9d626dbb25b6bd00e371d25a827aa9772f2836c7bf1d4beddca"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-cfs_v3-0.json",
+          "bytes": 116248,
+          "sha256": "520c9a70fd687bbe6f98e25cba78fa03a7083564bd51bbdbae75cd1f1ddc6c47"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-gcfm-0.json",
+          "bytes": 239842,
+          "sha256": "ae9d374597a9da7ec990cbf1173651eae4d08499b0faeeaa79c9518d279b5878"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-osm-0.json",
+          "bytes": 688502,
+          "sha256": "9bd00c72ca4f3bd03fabc4b3320b691daea1075c7897deda39795c0a4ddade9f"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-sfm-0.json",
+          "bytes": 111459,
+          "sha256": "e3c9aafa69991cfccee06b6acb10cc805b7f3a1376530aebd0ef9a9ea7629b82"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/bottlenecks-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/bottlenecks-warp-0.json",
+          "bytes": 121342,
+          "sha256": "1f1843f74f21b053f329e2d25ec22e9a0d4fd2fe30cdb641b72e828d0d45fb34"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/campus-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/campus-cfs-0.json",
+          "bytes": 357536,
+          "sha256": "879b559bad58b4afd9e66e3f0ee6a0fa69dd81604869828477e456f07649cc21"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-avm-0.json",
+          "bytes": 404024,
+          "sha256": "18f87226d0dddc73307f870e7b86872cd10e5d7467d31f57686cff639d117467"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-cfs-0.json",
+          "bytes": 106019,
+          "sha256": "8652c4c159b225411e76e46e86d2352883935b991d6f877c375051327057ac15"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-cfs_v1-0.json",
+          "bytes": 106022,
+          "sha256": "0d861fc78373690ead6dd37fddf86f78b6122251193ab55e23e70be80013e222"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-cfs_v3-0.json",
+          "bytes": 106606,
+          "sha256": "dd537a457c47795e3b859aaa1556b3b68d9bb6671b78f8bbb71018c50ec6adfa"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-gcfm-0.json",
+          "bytes": 237842,
+          "sha256": "82933ed6e3e8727ad647c734bb5e42643be8864f19b662bf779a6e3aed0fcf0a"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-osm-0.json",
+          "bytes": 747613,
+          "sha256": "0ad91d6df368feebf4c15ae8888f70d7f3016c0397b5e80f5b8af534fcef8494"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-sfm-0.json",
+          "bytes": 96153,
+          "sha256": "5dbdc42a6f829ac33ca56bc157b840b77fb2e6613ff64deb9150458d39438c35"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corner-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/corner-warp-0.json",
+          "bytes": 99085,
+          "sha256": "ab7c929409ea963c1d5c2c9147910cbbd390f844c1ffcec9f33fa443d20de927"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-avm-0.json",
+          "bytes": 133247,
+          "sha256": "be4f93624809c37805f7e1c11bf3078bb0fd70c9d06bed0003e0ce045de2317c"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-cfs-0.json",
+          "bytes": 132755,
+          "sha256": "de801770f04861b4dc6a104632e8015b1e36595ea003f4230bc64c45c909010c"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-cfs_v1-0.json",
+          "bytes": 132758,
+          "sha256": "8a340ad650f962cb193bc5d09861e386bf7297f6f4ed53b48ec68b715b2da3ff"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-cfs_v3-0.json",
+          "bytes": 125047,
+          "sha256": "e29e4d012d10291e185dc50e60b56a73c0172522ef1da158113535254a00aa19"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-gcfm-0.json",
+          "bytes": 275596,
+          "sha256": "3d88bbc67124a7cbe4b0ecc6cfda1dcaeba060f09efea058bae233aa4c7047c1"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-osm-0.json",
+          "bytes": 888297,
+          "sha256": "d7b89ed04501f224eb041895c166e1b153b9c2799f9a7e844f589c4920af3d41"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-sfm-0.json",
+          "bytes": 119550,
+          "sha256": "71868915f5d9a4d0c23b0c2b5383f6026f55d8c9c55dab719c72a1977cae9a95"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/corners-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/corners-warp-0.json",
+          "bytes": 123667,
+          "sha256": "9246f39bff7edf47f8746320f538a43b05db37c6e672daa485b0a8e0cee9defd"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/earlier1-hall-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/earlier1-hall-gcfm-0.json",
+          "bytes": 365951,
+          "sha256": "a4e5d12f1f86e52f2ea96cf8878413d4e0b49ab442a1c196bf43987324fecb2f"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/earlier1-hall-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/earlier1-hall-warp-0.json",
+          "bytes": 361382,
+          "sha256": "e713aea8041dbaa0085b417c4422364bfd6edb1407f7fbdf544dfc6caf6ec702"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/earlier1-lanes-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/earlier1-lanes-cfs-0.json",
+          "bytes": 242987,
+          "sha256": "1277adfcee4c0bddeaed524963d03140e10b39aed38e36c6f94a403ea065f4ff"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/earlier1-search-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/earlier1-search-cfs-0.json",
+          "bytes": 221653,
+          "sha256": "3482752e5b533b123197cc5cbc31d9ad0bedf1e95521c0896d09a438e02d36b2"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/earlier2-hall-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/earlier2-hall-gcfm-0.json",
+          "bytes": 318099,
+          "sha256": "339b86af30589660d8f98a37469543a4f6f370985593cea6df9a3cb9e89ba39b"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/external-avm-0.json",
+          "bytes": 925154,
+          "sha256": "1e7d2a77c96c883c81d2311727bd2fd2a14347db59738a124aa0b3a1e477a40d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/external-cfs-0.json",
+          "bytes": 892940,
+          "sha256": "c9297531a300347c57011a829ab915b4e048ba895e33c225a877b0893d4e7ab8"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/external-cfs_v1-0.json",
+          "bytes": 892943,
+          "sha256": "8174d8982a7ba4b59b4073cd9a7ce728059e8fbf20c1cb085dd74772609b8d03"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/external-cfs_v3-0.json",
+          "bytes": 912798,
+          "sha256": "d04c9cd55c78005b9a1e30db63f794df6629016579281d814ae205654114588c"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/external-gcfm-0.json",
+          "bytes": 2328872,
+          "sha256": "a7e01fa4a3482970b987d1337b514fb69c0a4bbbd69a881fa719838c8916047d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/external-osm-0.json",
+          "bytes": 720840,
+          "sha256": "3ef287ce8a703dd82e5449d40ae0945d5dbd85fc23be9968ee1a415b17e37426"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/external-sfm-0.json",
+          "bytes": 858946,
+          "sha256": "ec7d67d0062d88ef7dc2c74a673ff3d34574b48ab59239197c2a45c82c6f5468"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/external-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/external-warp-0.json",
+          "bytes": 868217,
+          "sha256": "9bc8937457f43db4c1eade0dbe4333a78c0eac3bef58b7aad4f991d4ea2d37cd"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/formation-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/formation-avm-0.json",
+          "bytes": 89289,
+          "sha256": "ee792feb1c827742df7b76f920e5ca3999f4eb9d9b353c8983904ba763b55d09"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/formation-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/formation-cfs-0.json",
+          "bytes": 85619,
+          "sha256": "496b1cfd151b3cb8769075b1b08149d58d0aed1c0c9c2b66973db71d8dcd0345"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/formation-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/formation-cfs_v1-0.json",
+          "bytes": 85622,
+          "sha256": "3853cd0d8a5a6653b91d215f1d23e93e06aac5f2c3aad84dfa8c60004f769263"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/formation-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/formation-cfs_v3-0.json",
+          "bytes": 86580,
+          "sha256": "7cf504db3eb25b51e1b87c4957d0a12f1a833d765788d105a553bf2f36644aae"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/formation-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/formation-gcfm-0.json",
+          "bytes": 177828,
+          "sha256": "395c4bcae4395e86fc58bb823b1c1283ff61666fd6969f9e86f1e956b89d19c3"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/formation-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/formation-sfm-0.json",
+          "bytes": 85258,
+          "sha256": "f595683d1f5296f938dc75371bf9f444091444479364a09a79383bdf77575bd7"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/formation-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/formation-warp-0.json",
+          "bytes": 86173,
+          "sha256": "ffec2865cff717ba0a7bcd5fb97317c63b65a6104208ede28ef401b8316a9a80"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-avm-0.json",
+          "bytes": 262037,
+          "sha256": "e71c808b7b4d30fa33ec323930fd461b862a2f1c38ee5965d4bc86314897eb3e"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-cfs-0.json",
+          "bytes": 260689,
+          "sha256": "9cd573e176646c040d7a7abaa2bad3d191027631b77f6a31bb44639e36fd02fb"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-cfs-1.json",
+          "target": "demos/evacuation-atlas/clips/hall-cfs-1.json",
+          "bytes": 263249,
+          "sha256": "2d42346931fd2c8943dc624427108dc8b731249f3e67adb50f1c5a19a131df86"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-cfs-2.json",
+          "target": "demos/evacuation-atlas/clips/hall-cfs-2.json",
+          "bytes": 269789,
+          "sha256": "23628a02ba3df71e75c1979cc71d8a6c35ac5bcd251f975fac8bbdc7f6a43fdc"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-cfs_v1-0.json",
+          "bytes": 260692,
+          "sha256": "0726cf2e9bfe97513d8de7d95dd6a47b5cebbd67ffb321622fa647a67e42ae19"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-cfs_v3-0.json",
+          "bytes": 259081,
+          "sha256": "01a482a00dd20c7466210af063936e08d8b16dd674d9bad70ca6e968b7760833"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-gcfm-0.json",
+          "bytes": 383107,
+          "sha256": "aa61ad4b7d68191682469c2cc639374bdfcea4d7660109e756cc02183fae2cd7"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-osm-0.json",
+          "bytes": 3683394,
+          "sha256": "449118a4a6243a47de2be2987d95ed76eb658f07358f6f11d84abce7dbd4c211"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-sfm-0.json",
+          "bytes": 265964,
+          "sha256": "ffbc1f5577ab69c1bfb0d23bd783c8c247099d5ed860bb2b3aac405bd7bd1f48"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/hall-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/hall-warp-0.json",
+          "bytes": 263895,
+          "sha256": "f92820923cb50b601b0c8a16e067641ff8d079c7c9e226b8835c63f0f73632b2"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/inflow-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/inflow-avm-0.json",
+          "bytes": 85095,
+          "sha256": "42b2ef8c44b7df41b41a10b875ce84196cf054a4b4071e5a40f1d4b070121d54"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/inflow-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/inflow-cfs-0.json",
+          "bytes": 87698,
+          "sha256": "501903f03ae2497dc4bea3dbe7f3def4e803f32cd0ae76b8af659d0294530dc8"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/inflow-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/inflow-cfs_v1-0.json",
+          "bytes": 87701,
+          "sha256": "e90d260a76c6f1ce93023334d8da90fbf666d31238067df52991a66f2b69d794"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/inflow-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/inflow-cfs_v3-0.json",
+          "bytes": 83331,
+          "sha256": "88daa3bf00aa540c5c4e1ac510ffd493b78a2244f10e3aa9562b6ac19c17e883"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/inflow-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/inflow-gcfm-0.json",
+          "bytes": 192535,
+          "sha256": "29c3a29992299963eb88f2d9eae7c90a1399e9a1a3a133461881f6aa7aba75f0"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/inflow-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/inflow-sfm-0.json",
+          "bytes": 79936,
+          "sha256": "df1037a90802dc45cd689aa2890dabeb069e779e10b689cfff9f74d33bbe9f08"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/inflow-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/inflow-warp-0.json",
+          "bytes": 84988,
+          "sha256": "e36a95d2ebfdb627e95db38f17c21ef2e0bdf83e057550afdd2057197595c01f"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-avm-0.json",
+          "bytes": 1143593,
+          "sha256": "60a1edf150b084fe12bd3c6f635a91c0a4f5597bfdfe57c972921a291721ade4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-cfs-0.json",
+          "bytes": 1091999,
+          "sha256": "3d631b7eed95cc2558fdbea799d0776eae13663f1015bd84ba2cbcafbc19ab10"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-cfs_v1-0.json",
+          "bytes": 1092002,
+          "sha256": "984cff5b73edcb6df4c249f062baa288cc4fe7de07473ab11d9d029a38a1eff1"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-cfs_v3-0.json",
+          "bytes": 1123324,
+          "sha256": "693c3fc7e45f6a7f41e081e783ba995f74bf0b5fe5dba0768233cc97b1240b76"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-gcfm-0.json",
+          "bytes": 2323872,
+          "sha256": "dee1242a380ce4f0b241f8b49ecb0be963ee7dea08daa60a6d8a30dde9d84d81"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-osm-0.json",
+          "bytes": 871860,
+          "sha256": "a8b10504fbfaafd8efe4a33b4102bf0a38278bde1a291df7091c5ca53f77da30"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-sfm-0.json",
+          "bytes": 1044766,
+          "sha256": "731ef3b4bff4e2f8d04882ed5d3b0b254dc0389567d02bcd54fd5ad249f7b618"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/internal-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/internal-warp-0.json",
+          "bytes": 1078597,
+          "sha256": "8cbf788b46e583c9df70d3b39a80012cceec2b29fb060965e90377f1727d4984"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-avm-0.json",
+          "bytes": 107300,
+          "sha256": "dc19fb1d2345bb866223a396deb7fba7727caa80a352d07408221f0e3d19c590"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-cfs-0.json",
+          "bytes": 108979,
+          "sha256": "103dc1fe5f53f96a1a69c4fa042ed0a199e066a7a9ea36f91204cbd28c20c4a5"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-cfs_v1-0.json",
+          "bytes": 108982,
+          "sha256": "61392dfac89e176f0cc03616b73b8e92e3b4066148f547f61a04d38a1d70d19f"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-cfs_v3-0.json",
+          "bytes": 206114,
+          "sha256": "3c8d51f160dbc40913da0c5f5af50d576bb14acbab27a43e52392c9e8f969ab4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-gcfm-0.json",
+          "bytes": 224223,
+          "sha256": "45482d50bf787d97dd9435c6e3e2512a0e204fd7586d3791713dc79cde653eef"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-osm-0.json",
+          "bytes": 663959,
+          "sha256": "7c69cbf652a0cd4d638d84770d64d5755a454150178f158db63e0e08dc53f545"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-sfm-0.json",
+          "bytes": 99947,
+          "sha256": "93067cd9cc0c82b0281ff8be2d25fb0279192e31c05fdbef8625f8f7152fb234"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/journey-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/journey-warp-0.json",
+          "bytes": 102302,
+          "sha256": "a05ed750c818f53ac1b84d0e2ba3d9dd252af8f3cea03e888f45c770a95ccdb8"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-avm-0.json",
+          "bytes": 136146,
+          "sha256": "91d48b0433ecc6b641c1a38eb9a4c10f3d02e5ae57b1cfecd74ce28306f796cf"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-cfs-0.json",
+          "bytes": 139696,
+          "sha256": "e3c84f2499f104bf29024a2e5540a35407be32c5bc9442a5ef7997995148dc60"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-cfs_v1-0.json",
+          "bytes": 139699,
+          "sha256": "de4e60275401c3825c2e2c733f6f54b0ad086cc648532e99f46ed41bd27e20e0"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-cfs_v3-0.json",
+          "bytes": 187136,
+          "sha256": "271952342ce3ea6b589af95aac6f7039a71ccd9b77be8a881d2d7a400784e413"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-gcfm-0.json",
+          "bytes": 265666,
+          "sha256": "797e1460ebd5aa5d3f0d338ff5bab1e3a118b6e000585303b1ec19142574bf02"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-osm-0.json",
+          "bytes": 1329433,
+          "sha256": "6f63f8fad43856306a8c561373e3190c315c32c576b623b37b201b8912528491"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-sfm-0.json",
+          "bytes": 137757,
+          "sha256": "179b3c44031c19e8d71c035d7898c72e9a5fc342da03c101c41b07a5f838a1e9"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/lanes-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/lanes-warp-0.json",
+          "bytes": 134843,
+          "sha256": "35aa382b548dc17741a85bc50b21d0711491e5927abc3002e5c5901edd03131b"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/leader-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/leader-avm-0.json",
+          "bytes": 85086,
+          "sha256": "239e266d44517b2dc26d24a9ab5dfd757886c36678bef10206292785dc6605f4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/leader-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/leader-cfs-0.json",
+          "bytes": 85442,
+          "sha256": "a0b8512ef0bffd308e1b85baa5fc38875e22324e445e60f5ab2509fbd335b346"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/leader-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/leader-cfs_v1-0.json",
+          "bytes": 85445,
+          "sha256": "211c0cba93f2d0723ec3e6efd78d663c505b7a9344df1698aa323a5144a81cef"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/leader-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/leader-cfs_v3-0.json",
+          "bytes": 83928,
+          "sha256": "8b189766fb1996bbccf01d7c008689e5399b9da0dbfc0bc9b6b3297a9562bb68"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/leader-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/leader-gcfm-0.json",
+          "bytes": 119586,
+          "sha256": "5e8ca286516325b6fecfbe452d3ff4d2e5be2cd1035b1b387b293d2a646f4400"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/leader-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/leader-sfm-0.json",
+          "bytes": 83206,
+          "sha256": "b5205d3e3027d8e6aaed204ebd420617a126192b86c3fb93faa22af3cc79f65a"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/leader-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/leader-warp-0.json",
+          "bytes": 84092,
+          "sha256": "2f5ab6778fd21c1f42b021d3122063a6d8abd3f2672910aabc5d048c539970fa"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-avm-0.json",
+          "bytes": 86132,
+          "sha256": "5594d09f32904dcd75069b99635767a686d169a129d0d135014ab9345035faec"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-avm-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-avm-1.json",
+          "bytes": 81910,
+          "sha256": "d0bec06c9c043fe5bc1ec00efdc7a2c62effe78c5eb2e9615c9514aa8e1b7f13"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-avm-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-avm-2.json",
+          "bytes": 82119,
+          "sha256": "e051a918e4518728dcfa3913f152da6a3811326681165e27a1f1e8e52111e441"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs-0.json",
+          "bytes": 86688,
+          "sha256": "d6117f508f823ee228ac73340120d15c95209198c22ba2869455b692781bb8e3"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs-1.json",
+          "bytes": 82068,
+          "sha256": "f69ade4540e27e8ce8cdb2232334fa2de863d5eb182b13fc7758c46962cd57d2"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs-2.json",
+          "bytes": 82084,
+          "sha256": "ef2c425aee1c982de3483e78126e33a8df0f9aab7e841bdec7df53ee2d335ec3"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs_v1-0.json",
+          "bytes": 86691,
+          "sha256": "3db7017e6059bb8de24b0973caaac1a9b896e2fdaba7fcfc36b2730d3c7f1ed7"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs_v1-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs_v1-1.json",
+          "bytes": 82071,
+          "sha256": "efca8a63491a4365355b086125ea32bb73a286b811348c4da27b5f3302cde8a7"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs_v1-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs_v1-2.json",
+          "bytes": 82087,
+          "sha256": "5e1bd785be9d60e6a25f903eab3a521e600d8c2fb01cf34ee5866b1a73040a8d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs_v3-0.json",
+          "bytes": 83143,
+          "sha256": "e16bb6436a2d2e95a1c033bdc63115172b9bf43ae32459ae0ff22c20aa075367"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs_v3-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs_v3-1.json",
+          "bytes": 79783,
+          "sha256": "3f1f8f7a93db89c064fe62009f74eaf7e900e533f494f29c5446a10808a08bb5"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-cfs_v3-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-cfs_v3-2.json",
+          "bytes": 78282,
+          "sha256": "8993e364a4a2298ec298c74293ae2550a041415bfee4939fd3a114015ee32dcc"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-gcfm-0.json",
+          "bytes": 199362,
+          "sha256": "ca5e19be181dda1be252f57dfff8749f04a1f9390df0b2cc797dd99becb2e938"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-gcfm-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-gcfm-1.json",
+          "bytes": 206678,
+          "sha256": "ef9731936c81f38ddbdcafc358189ee1d523c61b66055c050c83cb2066ae8e79"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-gcfm-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-gcfm-2.json",
+          "bytes": 182070,
+          "sha256": "85949e5abecceaa0366a09cb8a5a8028eb3f6dc36eea862e2b6bbcc230e930d7"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-osm-0.json",
+          "bytes": 606779,
+          "sha256": "67634f6ceff8a3de57e355780181c25fede16277dfecac6c5bd0594cd97e1f0e"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-osm-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-osm-1.json",
+          "bytes": 593479,
+          "sha256": "b51c589943fba628ce6928d035283b549c0895372f910ae081de1da069e7990b"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-osm-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-osm-2.json",
+          "bytes": 594354,
+          "sha256": "0ac1e20177d9c349a298987d6af4dbc1fb6d105860f9411be488fd4ea0c5d6ab"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-sfm-0.json",
+          "bytes": 83275,
+          "sha256": "9b34ba497228d546c63c0d2e172d754f082adcca80deb1001fa8fe1bb4d256be"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-sfm-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-sfm-1.json",
+          "bytes": 80022,
+          "sha256": "ad490ac7b054119fa357bc696416d490c3d86ab5aa4f90981e0a0d92261cf682"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-sfm-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-sfm-2.json",
+          "bytes": 78747,
+          "sha256": "7f9dda201827f941504e1e8837546a392b1385e5b06be7995984538c497e72ab"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-warp-0.json",
+          "bytes": 85381,
+          "sha256": "01e22b752197d8ed755ea26efbb835260be007eefa191a022648f5af6ae82d83"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-warp-1.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-warp-1.json",
+          "bytes": 81679,
+          "sha256": "af99f69c26b9eec38dfca991d221607552b06d59a21097563e296787a31bc3a1"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/obstacles-warp-2.json",
+          "target": "demos/evacuation-atlas/clips/obstacles-warp-2.json",
+          "bytes": 81484,
+          "sha256": "8ac71748004ee153b978e5765a23a408f25c9dd2d9d8ac3103452597f0fbade7"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/outage-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/outage-avm-0.json",
+          "bytes": 88828,
+          "sha256": "e1309343db792f708728be11f66a5e2c462ba8eed658a171edc35897d456cae5"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/outage-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/outage-cfs-0.json",
+          "bytes": 85693,
+          "sha256": "963d82e24b336feab39c02b63a4ccfbfd59f728dc433c1374155be6d8f00c570"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/outage-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/outage-cfs_v1-0.json",
+          "bytes": 85696,
+          "sha256": "b10203c8b2212b85e1d5af4796ef0ef98f4609218d4af1b0277d819039528b4c"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/outage-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/outage-cfs_v3-0.json",
+          "bytes": 83909,
+          "sha256": "f97a6e7b93eb4f5db7980adc90088047898c9f4a9b1de2e9ecc0e4b285fcc834"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/outage-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/outage-gcfm-0.json",
+          "bytes": 157773,
+          "sha256": "c1625cae4ebba12fbc3ae218b1997139e04491eaf816dd0192e5024a9d85c681"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/outage-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/outage-sfm-0.json",
+          "bytes": 87393,
+          "sha256": "290545c415301bf2e2433b0c1b785090a4af1bb462c37073b368fc022cf18cb4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/outage-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/outage-warp-0.json",
+          "bytes": 87794,
+          "sha256": "703999beb8d4916fb225ffb2c0d786cb6bd4d0f6b50e3091b455b7ac6583501b"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pace-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/pace-avm-0.json",
+          "bytes": 134832,
+          "sha256": "ba80941d2902d46e82b0a65a8f3ae1f6274438631a2440f37c71b47789c71701"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pace-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/pace-cfs-0.json",
+          "bytes": 135207,
+          "sha256": "6d8316eb3a741ed8b5b7153019ab0da62f70d35365a352011975c4a4c72af9f4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pace-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/pace-cfs_v1-0.json",
+          "bytes": 135210,
+          "sha256": "d9dd188148e89ccafa05c6e09bc5adf8fefed2645f2c58b15b2af440f87a52cc"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pace-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/pace-cfs_v3-0.json",
+          "bytes": 135599,
+          "sha256": "4c2d63fea8a6615e13cb9b043c7e3b55d906b68d2b369b1a7b476f787338d62c"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pace-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/pace-gcfm-0.json",
+          "bytes": 181416,
+          "sha256": "b6fa4adc97a65004cb959336c2f3334bfee26e0736a4cf5d0648167fb29aa24d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pace-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/pace-sfm-0.json",
+          "bytes": 134954,
+          "sha256": "e05c6c42d3f15bbb77887e98c4aef307bbe7c70a7b414e52d603bf78fc10ef20"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pace-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/pace-warp-0.json",
+          "bytes": 134954,
+          "sha256": "a59eee9c228707df8753238f201f6a68d4cc0dada8704c2b8df0025f3d1c21ed"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pavilion-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/pavilion-cfs-0.json",
+          "bytes": 473932,
+          "sha256": "9634add7997a756f620927823a8c84cd2461d6645485b129ddd07b1622977d35"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pavilion-cfs-1.json",
+          "target": "demos/evacuation-atlas/clips/pavilion-cfs-1.json",
+          "bytes": 472274,
+          "sha256": "ee6fd77b3055a651c71dd08953a0228069bf07680d9d060eba1915fc0aec0346"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/pavilion-cfs-2.json",
+          "target": "demos/evacuation-atlas/clips/pavilion-cfs-2.json",
+          "bytes": 469701,
+          "sha256": "3c4d04b7393b5997a358d043342be87dcf70b906af78cfe20449638bf6373eb8"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/queue-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/queue-avm-0.json",
+          "bytes": 83178,
+          "sha256": "e25f1330a9a0fdd53fc61f60764aa63de347bd5e9ce5e863faf133d7c545405a"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/queue-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/queue-cfs-0.json",
+          "bytes": 81851,
+          "sha256": "3f2023bd8209aea79d34c7fded76f21638a3688cca6b6379bb4eae1afea1c093"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/queue-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/queue-cfs_v1-0.json",
+          "bytes": 81854,
+          "sha256": "b282b4b526eaa3716d0a75d2b127ad7a5596d71d38b430645a926ad7fa553c5b"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/queue-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/queue-cfs_v3-0.json",
+          "bytes": 77035,
+          "sha256": "60ebe146e75fce9463b9f2d0a962747272ee4358a9115668bb607c2de5afdda4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/queue-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/queue-gcfm-0.json",
+          "bytes": 247073,
+          "sha256": "5493eb0742ce6288810ab2264569abbce5b195b1486cd9c0b973646a493d4b00"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/queue-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/queue-sfm-0.json",
+          "bytes": 78859,
+          "sha256": "633e41b915d797db145250b72cfbd0f0b51b85bb521a632baf99b3ebfe3b0d57"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/queue-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/queue-warp-0.json",
+          "bytes": 79707,
+          "sha256": "18d054c7dba1a9e02d1ac3d1fbf6e248ab5073a509dbe70310fa1f7347e59392"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/rectangle-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/rectangle-cfs-0.json",
+          "bytes": 23393,
+          "sha256": "7bc3ec081d0d2d6a4e7b60d7d3f41060992b96cb22e4b27a1df8770edb9264b4"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-avm-0.json",
+          "bytes": 98371,
+          "sha256": "e1a146b232c3ed57be2750194e9c367ced4c97ddeddcb0cf2c095f012056a721"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-cfs-0.json",
+          "bytes": 99188,
+          "sha256": "1e056c982bf314b475a10295a2cf778a32e46231e60d5557c6064c0cb16566a6"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-cfs_v1-0.json",
+          "bytes": 99191,
+          "sha256": "0d3a744a8fc9d19fdebcd030efaee36c5feb9df79328f1aee13fde4c29e88930"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-cfs_v3-0.json",
+          "bytes": 92713,
+          "sha256": "653a48e42d6587a786a1d0568e1f3b045d56be88127037ae7782d2013f515536"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-gcfm-0.json",
+          "bytes": 173907,
+          "sha256": "0f93cd80dd8f9c0244666cb8c2f6360f5feea35ff77fcaa4babf7bcb7726de3d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-osm-0.json",
+          "bytes": 825297,
+          "sha256": "82e44f31c115311324987bfb8d7ff8998f3116759b53766839c7ab594b1d2fbf"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-sfm-0.json",
+          "bytes": 94436,
+          "sha256": "523ee95027dbd01f56aa71b8847b293ffb198d953be56ef94aee8c0e32e63d9d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/routes-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/routes-warp-0.json",
+          "bytes": 95988,
+          "sha256": "3df9cb0cb7d857f38b3b930c7b5afc43a6073e4a703f09e99a21f3a573c24062"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/search-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/search-avm-0.json",
+          "bytes": 76325,
+          "sha256": "ecc96629904c1f0f8d2b687b934f759e1dbf2cfa5d57b7c878fc7f9427910507"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/search-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/search-cfs-0.json",
+          "bytes": 76275,
+          "sha256": "07db7b5770a247342019aff460f82010986a6c55a36dafd26cbaca5283e33999"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/search-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/search-cfs_v1-0.json",
+          "bytes": 76278,
+          "sha256": "462ebc165eb45aee848a1c6ce292e62e01ef1037a6e1a69bba4a89e12a355823"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/search-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/search-cfs_v3-0.json",
+          "bytes": 75799,
+          "sha256": "8a35d0fa85da46a6e0c59d07cfe0b1d2bddde85352d71ee30b6f600e718b35cf"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/search-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/search-gcfm-0.json",
+          "bytes": 96657,
+          "sha256": "75be8d8bea26fdba4e7f2eab0aa970b6e9a26a8717f901d61a65e8154c9bf7c9"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/search-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/search-sfm-0.json",
+          "bytes": 76971,
+          "sha256": "1d2d20d8cf2c3b708b95ed4612df6c18746e62ed5a7ee4a76d0a9d920bc77081"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/search-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/search-warp-0.json",
+          "bytes": 76304,
+          "sha256": "ced606435ef8dfcfb61c27925e744ff0e739e901539f2a62e400fc992984fce1"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/single-avm-0.json",
+          "bytes": 42091,
+          "sha256": "4dc1e555e4f1b83ed21fd9adfbcd89ea365de8899b5cf5939d7b77dc563a7bef"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/single-cfs-0.json",
+          "bytes": 41452,
+          "sha256": "89121c009e145135266d20909b2e86571d4ff40cd2c46f2055ab1ad54649238b"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/single-cfs_v1-0.json",
+          "bytes": 41455,
+          "sha256": "f85c68b39c6eb7ad82a687115bd65e9741c65a6d6328967089692d62612bd236"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/single-cfs_v3-0.json",
+          "bytes": 42252,
+          "sha256": "5568625ca406f7c1ba7c66c6b3fcaa420c529d9c74bc38d1a842266b7250d8df"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/single-gcfm-0.json",
+          "bytes": 86819,
+          "sha256": "f748aa8d4584d48257eaf11fe83de9c01f174d55d68d299ee5bd6e639306d0a3"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-osm-0.json",
+          "target": "demos/evacuation-atlas/clips/single-osm-0.json",
+          "bytes": 188593,
+          "sha256": "c3802b8d0929f16ad51e558bd73ecf94a09004469a1ef73722ede5276583f825"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/single-sfm-0.json",
+          "bytes": 38307,
+          "sha256": "4f7d856834335c85c766f849a7c5046b93ffe782fc5d0a69389d1cde12403efa"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/single-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/single-warp-0.json",
+          "bytes": 43614,
+          "sha256": "95c4704266ccaa0b4f1321f20dc2cda4c4eae9bd05a6c2483cf0785a59b1c6aa"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/split-avm-0.json",
+          "target": "demos/evacuation-atlas/clips/split-avm-0.json",
+          "bytes": 120407,
+          "sha256": "5426aa361bca7782521fd454b95a78794b18a60912816cc754c28a9355417b6e"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/split-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/split-cfs-0.json",
+          "bytes": 123404,
+          "sha256": "ee566d258316dbde331c0c3f92693d884610e954f6bb6e282875106a82c94e9d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/split-cfs_v1-0.json",
+          "target": "demos/evacuation-atlas/clips/split-cfs_v1-0.json",
+          "bytes": 123407,
+          "sha256": "00f7aea7f0f6f6a005c9dd53723bd04556577610b23a53d64669285a97a09828"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/split-cfs_v3-0.json",
+          "target": "demos/evacuation-atlas/clips/split-cfs_v3-0.json",
+          "bytes": 117375,
+          "sha256": "5a9142681cba5fa670e33df5fcc64d4b6910fa5d581717c2b5b5b0a514a50ac5"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/split-gcfm-0.json",
+          "target": "demos/evacuation-atlas/clips/split-gcfm-0.json",
+          "bytes": 235680,
+          "sha256": "841eeabfba71d926c82fbfa8da4343d2e376960341dfb8a39fdb940d87b46d5d"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/split-sfm-0.json",
+          "target": "demos/evacuation-atlas/clips/split-sfm-0.json",
+          "bytes": 114799,
+          "sha256": "938f47af4977cf5b454719d4adc509fe8e3ab254b998b8cd846c0f2d5c288535"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/split-warp-0.json",
+          "target": "demos/evacuation-atlas/clips/split-warp-0.json",
+          "bytes": 119262,
+          "sha256": "37d7743b9f63a804b457c133b462f821039a36ee0f9c4449c103b0e688a2cbd8"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/clips/square-cfs-0.json",
+          "target": "demos/evacuation-atlas/clips/square-cfs-0.json",
+          "bytes": 15340,
+          "sha256": "471bd5fb2bec1b10066d0287e90b8fc91fb904fad2e6b51ee0613ddccaf77d47"
+        },
+        {
+          "source": "site/demos/evacuation-atlas/index.html",
+          "target": "demos/evacuation-atlas/index.html",
+          "bytes": 5356,
+          "sha256": "74a0a45aff78e3eeafc2b4b33a4ec889aa7391875aeeca4b93a821515eded2ad"
+        }
+      ],
+      "project_id": "crowds",
+      "homepage_entry": {
+        "href": "demos/evacuation-atlas/?lang={lang}",
+        "label": {
+          "zh": "打开疏散演示图集",
+          "en": "Open the evacuation atlas"
+        },
+        "caption": {
+          "zh": "在建筑平面上观察人群，比较不同模型通过转角、窄门与交汇处的过程。",
+          "en": "Follow pedestrians through a building and compare how models handle turns, narrow doors and intersecting flows."
+        },
+        "primary": true
+      }
+    },
+    {
       "id": "atrium100",
       "title": {
         "zh": "Atrium 100 双层建筑疏散双语交互回放",

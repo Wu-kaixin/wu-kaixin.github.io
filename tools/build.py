@@ -106,8 +106,9 @@ def _render_page(config: dict, manifest: dict, site_url: str, lang: str, prefix:
         demo_html = ''
         for entry in demos_by_project.get(p['id'], []):
             href = entry['href'].replace('{lang}', lang)
+            button_style = 'primary' if entry.get('primary') else 'secondary'
             demo_html += (
-                f'<p><a class="button secondary" href="{prefix}{E(href, quote=True)}">'
+                f'<p><a class="button {button_style}" href="{prefix}{E(href, quote=True)}">'
                 f'{E(entry["label"][lang])} →</a></p>'
                 f'<p>{E(entry["caption"][lang])}</p>'
             )
