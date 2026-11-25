@@ -13,7 +13,6 @@ main{max-width:1660px;padding:0 clamp(15px,3.5vw,54px) 14px;margin:auto}.heading
 #lang button[aria-pressed=true]{background:#fff;color:#173a3b;font-weight:700}
 #lang button:hover{text-decoration:underline;text-underline-offset:2px}
 @media(max-width:420px){.mast-inner{column-gap:2px}.mast-tools{gap:2px}.mast-tools #lang{gap:0}#lang button{font-size:12px;padding:4px}}
-@media(max-width:360px){.mast .mast-tools{grid-column:1/-1;grid-row:2}.mast nav{grid-row:3}}
 .phase-tag{position:absolute;bottom:9px;left:12px;background:#f8fcf5ed;border:1px solid #afc2b4;border-radius:4px;padding:3px 7px;color:#395d50;font-size:11px;pointer-events:none}.phase-tag.flag{background:#fff1d9;color:#805322;border-color:#c8a778}.comparison-counts{display:grid;grid-template-columns:1fr 1fr;gap:9px}.comparison-counts>div{display:grid;border-left:3px solid #3a8575;padding-left:8px}.comparison-counts>div+div{border-color:#b48c55}.comparison-counts strong{font:550 26px/1.12 Georgia,serif}.pair-caption,.analysis-scope{font-size:11px;color:var(--muted);margin-top:4px}.pair-table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}.pair-table th,.pair-table td{padding:3px 0;text-align:right;font-weight:650}.pair-table thead th{color:#4b7165;font-size:10px;border-bottom:1px solid #d8e1d9}.pair-table th:first-child{text-align:left;color:var(--muted);font-weight:450}.pair-table td,.pair-table thead th:not(:first-child){min-width:27px}.metrics-panel{padding-block:9px}.metrics-panel summary{font-size:12px;font-weight:650;cursor:pointer}.metrics-panel[open] summary{margin-bottom:7px}.analysis-scope{border-top:1px solid #dce4dc;padding-top:4px}.analysis-scope+.read-label{margin-top:8px}#performance{font:11px Consolas,monospace;color:#576b61;display:block}
 @media(min-width:841px){.stage{height:clamp(345px,calc(100dvh - 293px),810px)}.heading{padding-top:14px;padding-bottom:13px}}
 @media(max-width:840px){.metrics-panel{grid-column:1/-1}}
@@ -24,4 +23,9 @@ main{max-width:1660px;padding:0 clamp(15px,3.5vw,54px) 14px;margin:auto}.heading
   .scene-options{min-width:0;flex-wrap:wrap}
   .scene-picker{min-width:0;max-width:100%}
   .scene-picker select{min-width:0}
+}
+@media(max-width:480px){
+  .mast-inner{grid-template-columns:minmax(0,1fr)}
+  .mast .mast-tools{grid-column:1;grid-row:2;justify-self:end}
+  .mast nav{grid-column:1;grid-row:3}
 }

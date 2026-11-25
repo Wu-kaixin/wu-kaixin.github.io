@@ -66,8 +66,8 @@
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.css",
           "target": "demos/evacuation-atlas/assets/atlas.css",
-          "bytes": 15856,
-          "sha256": "c4bf84cf34ba5b68e00378d8619f8ce7f07201a1a7c1baa63fe7511e89c56ced"
+          "bytes": 15942,
+          "sha256": "c27a5980108fc58cf79ecf13dc3ce6c7a93e4c255f64f93432dc2f9b046edb15"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.js",
@@ -1272,8 +1272,8 @@
         {
           "source": "site/demos/evacuation-atlas/index.html",
           "target": "demos/evacuation-atlas/index.html",
-          "bytes": 5560,
-          "sha256": "bffa09e0a8323c7d447f745aa45a3b1fda6d86d578057f5e724b115d061969a8"
+          "bytes": 5562,
+          "sha256": "b428823d563b28a2e092a25deae6d6c4a9752b9fbc54f788d4b9a19a6f259a39"
         }
       ],
       "project_id": "crowds",
