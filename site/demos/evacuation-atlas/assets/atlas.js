@@ -4,7 +4,8 @@ import {MapView} from './map.js';
 import {configureResults,initializeResults,setResultTime} from './comparison.js';
 
 const $=id=>document.getElementById(id),params=new URLSearchParams(location.search);
-let lang=params.get('lang')==='en'?'en':params.get('lang')==='zh'?'zh':navigator.language.startsWith('zh')?'zh':'en';
+const languages=['zh','en','ja'],browserLang=navigator.language.split('-')[0];
+let lang=[params.get('lang'),browserLang,'en'].find(value=>languages.includes(value));
 const w=k=>word(k,lang),el=(tag,cls,content)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(content!==undefined)n.textContent=content;return n;};
 function option(select,value,label){select.add(new Option(label,value));}
 function fill(select,items,value){select.replaceChildren();for(const [id,text] of items)option(select,id,text);select.value=value;}
@@ -52,18 +53,18 @@ if(params.has('diagnostics'))Object.defineProperty(window,'atlasDiagnostics',{ge
   frameGaps:[...stats.frameGaps],loadMs:stats.loadMs,scene:sceneId,models:entries.map(c=>c.model),t:time,zoom:view.z,dx:view.dx,dy:view.dy,playing,
   archived:!!revision,floor,lang,ready:tracks.length>0&&!loadError})});
 function setWords(){
-  document.documentElement.lang=lang==='zh'?'zh-CN':'en';document.title=lang==='zh'?'Atrium 100 · 疏散图集':'Atrium 100 · Evacuation Atlas';
+  document.documentElement.lang=lang==='zh'?'zh-CN':lang;document.title=lang==='zh'?'Atrium 100 · 疏散图集':lang==='ja'?'Atrium 100 · 避難アトラス':'Atrium 100 · Evacuation Atlas';
   document.querySelectorAll('[data-word]').forEach(n=>n.textContent=w(n.dataset.word));
   document.querySelectorAll('[data-tip]').forEach(n=>{n.title=w(n.dataset.tip);n.setAttribute('aria-label',n.title);});
   document.querySelectorAll('[data-mode]').forEach(n=>n.setAttribute('aria-pressed',String(n.dataset.mode===mode)));
   for(const [id,key] of [['modes','views'],['map-a','map'],['map-b','modelB'],['timeline','timeline'],['speed','speed'],['camera','camera'],['scene','scene'],['model','modelA'],['model-b','modelB'],['floor','floor'],['revision','revision']])$(id).setAttribute('aria-label',w(key));
-  $('home').setAttribute('aria-label','Atrium 100 · '+w('atlas'));$('lang').textContent=lang==='zh'?'English':'中文';
+  $('home').setAttribute('aria-label','Atrium 100 · '+w('atlas'));$('lang').value=lang;
   $('model').setAttribute('aria-label',w(mode==='compare'?'modelA':'model'));
   fullscreenLabel();
-  $('lang').setAttribute('aria-label',lang==='zh'?'Switch to English':'切换到中文');
+  $('lang').setAttribute('aria-label',{zh:'选择语言',en:'Select language',ja:'言語を選択'}[lang]);
   $('refs').replaceChildren();
   notebooks.forEach((slug,i)=>{const link=el('a','',w('notebook'+(i+1)));link.href='https://www.jupedsim.org/stable/notebooks/'+slug+'.html';link.target='_blank';link.rel='noopener noreferrer';$('refs').append(link);});
-  const live=el('a','',w('original'));live.href='https://wu-kaixin.github.io/evacuation/?lang='+lang;live.target='_blank';live.rel='noopener noreferrer';$('refs').append(live);
+  const live=el('a','',w('original'));live.href='https://wu-kaixin.github.io/evacuation/?lang='+(lang==='ja'?'en':lang);live.target='_blank';live.rel='noopener noreferrer';$('refs').append(live);
 }
 function populate(){
   setWords();const sc=currentScene(),select=$('scene');select.replaceChildren();let category='';
@@ -96,7 +97,7 @@ function populate(){
   $('tag-a').textContent='A  ·  '+modelName(model,lang);$('tag-b').textContent='B  ·  '+modelName(modelB,lang);
   if(tracks.length)detailControls();playLabel();
 }
-function groupName(g){return g==='V'?w('visitors'):lang==='zh'?g+' 组':'Group '+g;}
+function groupName(g){return g==='V'?w('visitors'):lang==='zh'?g+' 组':lang==='ja'?'グループ '+g:'Group '+g;}
 function detailControls(){
   const track=tracks[0],groups=[...new Set(tracks.flatMap(t=>t.groups))];
   if(!groups.includes(camera))camera='all';
@@ -110,7 +111,7 @@ function detailControls(){
     input.onchange=()=>{layers[key]=input.checked;invalidate();};label.append(input,document.createTextNode(w(key)));$('toggles').append(label);});
   if(mode==='behavior'){
     const label=el('label'),input=document.createElement('input');input.type='checkbox';input.id='tour';input.checked=touring;
-    input.onchange=()=>{touring=input.checked;};label.append(input,document.createTextNode(lang==='zh'?'连续播放专题':'Play topics in sequence'));$('toggles').append(label);
+    input.onchange=()=>{touring=input.checked;};label.append(input,document.createTextNode(lang==='zh'?'连续播放专题':lang==='ja'?'テーマを順番に再生':'Play topics in sequence'));$('toggles').append(label);
   }
   const legend=el('div','legend-grid');
   const keys=[['person','people'],...(tracks.some(t=>t.data.guide_demo)?[['guide','guide']]:[]),
@@ -121,8 +122,8 @@ function detailControls(){
   $('legend').replaceChildren(legend,gr);
   const notes=entries.map(c=>{
     const name=(c.model==='osm'?'Vadere':'JuPedSim')+' · '+modelName(c.model,lang);
-    if(c.model==='osm')return name+' · '+(lang==='zh'?'身体可行步约束，自主行走':'feasible-step constraints, autonomous motion');
-    if(c.model==='gcfm'&&!c.attempt)return name+' · '+(lang==='zh'?'原生椭圆与速度制动':'native ellipses and speed braking');
+    if(c.model==='osm')return name+' · '+(lang==='zh'?'身体可行步约束，自主行走':lang==='ja'?'身体的に可能な歩幅の制約に基づく自律歩行':'feasible-step constraints, autonomous motion');
+    if(c.model==='gcfm'&&!c.attempt)return name+' · '+(lang==='zh'?'原生椭圆与速度制动':lang==='ja'?'モデル固有の楕円形状と速度制御による減速':'native ellipses and speed braking');
     return name;
   });
   $('engine').textContent=notes.join('  /  ');
@@ -151,7 +152,7 @@ function compareStats(samples){
   if(tracks.some(t=>t.data.guide_demo)&&entries.some(c=>c.model==='osm'))$('readings').append(el('p','analysis-scope','OSM · '+w('osmScope')));
   const exits=tracks[0].exits.map(e=>[exitName(e.id,lang),a.exits[e.id]||0,b.exits[e.id]||0]);
   const unknown=[a,b].map(v=>v.arrived-Object.values(v.exits).reduce((x,y)=>x+y,0));
-  if(unknown.some(Boolean))exits.push([lang==='zh'?'出口未定位':'Exit unassigned',...unknown]);
+  if(unknown.some(Boolean))exits.push([lang==='zh'?'出口未定位':lang==='ja'?'出口不明':'Exit unassigned',...unknown]);
   $('exit-list').replaceChildren(pairTable(headers,exits));
 }
 function motionStats(samples){
@@ -163,7 +164,7 @@ function motionStats(samples){
     if(tracks.length>1)readings.push(el('div','read-label',(i?'B':'A')+' · '+modelName(entries[i].model,lang)));
     const values=[[w('meanSpeed'),row[1],lang==='zh'?'米/秒':'m/s',2]];
     for(let f=0;f<row.length-2;f++){
-      values.push([(row.length>3?w('floor'+f)+' · ':'')+w('density'),row[f+2],lang==='zh'?'人/㎡':'p/m²',3]);
+      values.push([(row.length>3?w('floor'+f)+' · ':'')+w('density'),row[f+2],lang==='zh'?'人/㎡':lang==='ja'?'人/m²':'p/m²',3]);
     }
     for(const [key,n,unit,digits] of values){const line=el('div','read-line');line.append(el('span','',key),el('b','',n==null?'—':n.toFixed(digits)+' '+unit));readings.push(line);}
     readings.push(el('p','analysis-scope',w(m.region)+' · '+minutes(row[0])));
@@ -184,7 +185,7 @@ function renderStats(samples){
     for(const e of r.exits){const line=el('div','exit-line'+(e.emergency?' em':'')),len=el('i'),fill=el('b'),n=v.exits[e.id]||0;
       fill.style.width=(v.admitted?100*n/v.admitted:0)+'%';len.append(fill);line.append(el('span','',exitName(e.id,lang)),len,el('b','',String(n)));rows.push(line);}
     const unknown=v.arrived-Object.values(v.exits).reduce((a,b)=>a+b,0);
-    if(unknown){const line=el('div','read-line');line.append(el('span','',lang==='zh'?'出口未定位':'Exit unassigned'),el('b','',String(unknown)));rows.push(line);}
+    if(unknown){const line=el('div','read-line');line.append(el('span','',lang==='zh'?'出口未定位':lang==='ja'?'出口不明':'Exit unassigned'),el('b','',String(unknown)));rows.push(line);}
   });
   $('readings').replaceChildren(...readings);$('exit-list').replaceChildren(...rows);
 }
@@ -274,7 +275,7 @@ function bind(){
   $('layout').onclick=()=>{const values=eligible().filter(c=>c.model===model&&(mode!=='compare'||eligible().some(b=>b.layout===c.layout&&b.model===modelB))).map(c=>c.layout);layout=values[(values.indexOf(layout)+1)%values.length];revision='';load();};
   $('floor').onchange=e=>{floor=e.target.value;resetView();populate();invalidate();};
   $('camera').onchange=e=>{camera=e.target.value;Object.assign(view,{dx:0,dy:0,z:camera==='all'?1:2.3});invalidate();};
-  $('lang').onclick=()=>{lang=lang==='zh'?'en':'zh';const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u);populate();if(loadError)$('message').textContent=w('failure');else if(!tracks.length)$('message').textContent=w('loading');invalidate();};
+  $('lang').onchange=e=>{lang=e.target.value;const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u);populate();if(loadError)$('message').textContent=w('failure');else if(!tracks.length)$('message').textContent=w('loading');invalidate();};
   $('layers').onclick=()=>{const open=$('layer-sheet').hidden;$('layer-sheet').hidden=!open;$('layers').setAttribute('aria-expanded',String(open));};
   document.addEventListener('click',e=>{if(!e.target.closest('#layers,#layer-sheet'))closeLayers();});
   $('help').onclick=()=>$('info').showModal();$('close').onclick=()=>$('info').close();

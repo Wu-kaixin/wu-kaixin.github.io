@@ -133,7 +133,7 @@ export class MapView{
     for(const ring of p.outlines)fillRing(c,ring.map(q=>xy(...q)),null,'#3e5a50',Math.max(1.55,Math.min(3.6,s*.38)));
     if(opt.labels){
       p.rooms.forEach(z=>{const r=z.bounds,[cx]=center(r),[a,yy]=xy(cx,r[3]-(r[3]-r[1])*.18);
-        const title=word(z.label,lg);if((r[2]-r[0])*s>Math.max(30,title.length*(lg==='zh'?9:5)))label(c,title,a,yy,clamp(s*1.95,10,15),'#526558',true);});
+        const title=word(z.label,lg);if((r[2]-r[0])*s>Math.max(30,title.length*(lg==='en'?5:9)))label(c,title,a,yy,clamp(s*1.95,10,15),'#526558',true);});
       if(p.size&&s>3.5){
         const [x,y]=xy(p.size[0]/2,p.size[1]===66?34.5:p.size[1]===44?23:50);
         label(c,word('crossing',lg),x,y,clamp(s*1.5,9,12),'#668179');

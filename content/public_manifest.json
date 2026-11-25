@@ -66,14 +66,14 @@
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.css",
           "target": "demos/evacuation-atlas/assets/atlas.css",
-          "bytes": 15261,
-          "sha256": "211be24c55fe5bdfc13819ba30260e92c1c670821555e22cf0b0662befb7878e"
+          "bytes": 15313,
+          "sha256": "b6ab95c4c8cae1be581b60009258448586a2d706f4a2814ade7fbbea96ddf00b"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.js",
           "target": "demos/evacuation-atlas/assets/atlas.js",
-          "bytes": 24250,
-          "sha256": "7b933609571fc69928be0e0ee2b00959dda362d59f3a65312505d157bb7a25cd"
+          "bytes": 24641,
+          "sha256": "3e1c396613378f2f1ff45fbef77cbd2ccb3e4fd5df5466cd9ac51af3044973f4"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/atrium.svg",
@@ -84,14 +84,14 @@
         {
           "source": "site/demos/evacuation-atlas/assets/comparison.js",
           "target": "demos/evacuation-atlas/assets/comparison.js",
-          "bytes": 9629,
-          "sha256": "59b9502e3b0774b4bfe057724ac0ab467f439de9335fdec2b9424d7c0e9b74f4"
+          "bytes": 11836,
+          "sha256": "ffc235ab446e44447247d418029fee146687c4dda5a69cca5dee91d884131c15"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/map.js",
           "target": "demos/evacuation-atlas/assets/map.js",
           "bytes": 11509,
-          "sha256": "7495d89ce7f81424a4720d0eb5134e5236e879fa5a4a1e3cdb9d3e8c1529f85a"
+          "sha256": "7893ee6ecf2f42162e8d342f496be99ac0c8e439831188afe383b63c8483b85d"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/replay.js",
@@ -102,14 +102,14 @@
         {
           "source": "site/demos/evacuation-atlas/assets/words.js",
           "target": "demos/evacuation-atlas/assets/words.js",
-          "bytes": 9137,
-          "sha256": "da359ce2dc500e8d944642b394dbe4443b5f93347174fd85c61529c632e0d304"
+          "bytes": 13461,
+          "sha256": "8900f5c4c73b4291fc4c2521d9e6952692af479b60cd558d7771eb7c9ca44646"
         },
         {
           "source": "site/demos/evacuation-atlas/catalog.json",
           "target": "demos/evacuation-atlas/catalog.json",
-          "bytes": 78833,
-          "sha256": "f076f7682f241abd8450bf2756eda11a06a8adce8a8e93e5fbdc9700ff8c58ee"
+          "bytes": 82770,
+          "sha256": "e38f1fdb47e8cfbb9eb1b53e3d7bb1bfd2abb781155103f0b1132bdcc5adad2f"
         },
         {
           "source": "site/demos/evacuation-atlas/clips/behavior-early1-bottleneck-gcfm-0.json",
@@ -1272,8 +1272,8 @@
         {
           "source": "site/demos/evacuation-atlas/index.html",
           "target": "demos/evacuation-atlas/index.html",
-          "bytes": 5356,
-          "sha256": "74a0a45aff78e3eeafc2b4b33a4ec889aa7391875aeeca4b93a821515eded2ad"
+          "bytes": 5492,
+          "sha256": "8257f613630e2512da0ba0de98856f7e9a3bc84b4910803e36f8e6f57885078b"
         }
       ],
       "project_id": "crowds",

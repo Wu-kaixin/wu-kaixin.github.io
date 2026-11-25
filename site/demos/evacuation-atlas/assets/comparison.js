@@ -38,26 +38,26 @@ export function relativeChange(a,b){
 }
 
 const strings={
-  title:['整段疏散对照','Full-episode comparison'],jump:['查看对照指标 ↓','View outcome measures ↓'],
-  curve:['累计离场比例','Cumulative departures'],arrCurve:['累计到达比例','Cumulative arrivals'],
-  completion:['最终完成率','Final completion'],t50:['50% 完成时间','Time to 50%'],t90:['90% 完成时间','Time to 90%'],
-  t100:['全员完成时间','Time to 100%'],mean:['人均疏散用时','Mean individual time'],flow:['平均通行量','Mean discharge rate'],
-  residual:['终点在途人数','People unfinished'],contact:['身体接触检查','Body-contact check'],flag:['有提示','Flagged'],clear:['无提示','No flag'],
-  base:['B 相对 A','B vs A'],people:['人','people'],unit:['人/秒','people/s'],pts:['百分点','pp'],
-  changed:['T90 相对变化','Relative change in T90'],unavailable:['未达阈值或不可比','Unreached or unmatched'],
-  invalidRun:['记录有运行错误，停用相对差。','A recording ended in an error. Relative changes are unavailable.'],
-  differentEvents:['两组的计时终点定义不同。','The recordings use different definitions of completion.'],
-  differentGuidance:['两组引导条件不同。仅列出各自观测值。','The guide conditions differ. Each column shows its own observed values.'],
-  differentCohort:['实际入场人数、身份或入场时刻不同。仅列出各自观测值。','The admitted cohorts or admission times differ. Each column shows its own observed values.'],
-  differentSpeeds:['开放大厅原版 OSM 与 JuPedSim 采用不同的期望步速配置。仅列出各自观测值。','The original hall OSM and JuPedSim recordings use different desired-speed settings. Each column shows its own observed values.'],
-  table:['整段指标','Episode measures'],method:['指标怎么算','How the measures work'],
-  cutoff:['百分比的分母为整段实际入场的行人，引导代理单独计数。T50、T90 和全员时间从仿真开始计算，取首次达到相应人数的回放时刻。','Percentages use all pedestrians admitted during the episode. Guides are counted separately. T50, T90 and clearance are measured from the simulation start to the first recorded event reaching each threshold.'],
-  means:['人均用时从每人入场算到其完成。平均通行量为入场人数除以全员完成时间。两项均须全员完成。横线表示未达到、条件不同或分母为零。','Individual time starts at each person’s admission. Mean discharge is the admitted count divided by clearance time. Both require full completion. A dash marks an unreached threshold, unmatched conditions or a zero denominator.'],
-  interpretation:['时间相对差为 (B − A) / A × 100%。负值表示 B 用时更短。完成率之差用百分点。每列是一个演示运行，接触提示按该记录的身体检查显示。','Relative time change is (B − A) / A × 100%. Negative values mean B took less time. Completion-rate differences use percentage points. Each column is one demonstration run, with its own body-contact checks.'],
-  measured:['本场景按进入安全区的记录时刻计数。','This scene counts observed arrivals in a safe area.'],sampled:['本场景按回放中行人离场的首帧计时，精度受采样间隔影响。','This scene uses the first replay frame after a pedestrian leaves. Timing has the resolution of the recording.'],
-  time:['仿真时间（秒）','Simulation time (s)'],metric:['指标','Measure'],
+  title:['整段疏散对照','Full-episode comparison',"避難全体の比較"],jump:['查看对照指标 ↓','View outcome measures ↓',"比較指標を見る ↓"],
+  curve:['累计离场比例','Cumulative departures',"累積退場率"],arrCurve:['累计到达比例','Cumulative arrivals',"累積到達率"],
+  completion:['最终完成率','Final completion',"最終完了率"],t50:['50% 完成时间','Time to 50%',"50%完了までの時間"],t90:['90% 完成时间','Time to 90%',"90%完了までの時間"],
+  t100:['全员完成时间','Time to 100%',"全員完了までの時間"],mean:['人均疏散用时','Mean individual time',"1人あたりの平均避難時間"],flow:['平均通行量','Mean discharge rate',"平均流出率"],
+  residual:['终点在途人数','People unfinished',"終了時の未完了人数"],contact:['身体接触检查','Body-contact check',"身体接触の確認"],flag:['有提示','Flagged',"警告あり"],clear:['无提示','No flag',"警告なし"],
+  base:['B 相对 A','B vs A',"A に対する B の差"],people:['人','people',"人"],unit:['人/秒','people/s',"人/秒"],pts:['百分点','pp',"ポイント"],
+  changed:['T90 相对变化','Relative change in T90',"T90 の相対変化"],unavailable:['未达阈值或不可比','Unreached or unmatched',"未達または比較不可"],
+  invalidRun:['记录有运行错误，停用相对差。','A recording ended in an error. Relative changes are unavailable.',"実行エラーで終了した記録があるため、相対差は表示しません。"],
+  differentEvents:['两组的计时终点定义不同。','The recordings use different definitions of completion.',"2つの記録で完了時刻の定義が異なります。"],
+  differentGuidance:['两组引导条件不同。仅列出各自观测值。','The guide conditions differ. Each column shows its own observed values.',"誘導条件が異なるため、各列にはそれぞれの観測値のみを示します。"],
+  differentCohort:['实际入场人数、身份或入场时刻不同。仅列出各自观测值。','The admitted cohorts or admission times differ. Each column shows its own observed values.',"入場者の人数、構成、または入場時刻が異なるため、各列にはそれぞれの観測値のみを示します。"],
+  differentSpeeds:['开放大厅原版 OSM 与 JuPedSim 采用不同的期望步速配置。仅列出各自观测值。','The original hall OSM and JuPedSim recordings use different desired-speed settings. Each column shows its own observed values.',"開放型ホールの元の記録では、OSM と JuPedSim の希望歩行速度の設定が異なります。各列にはそれぞれの観測値のみを示します。"],
+  table:['整段指标','Episode measures',"記録全体の指標"],method:['指标怎么算','How the measures work',"指標の計算方法"],
+  cutoff:['百分比的分母为整段实际入场的行人，引导代理单独计数。T50、T90 和全员时间从仿真开始计算，取首次达到相应人数的回放时刻。','Percentages use all pedestrians admitted during the episode. Guides are counted separately. T50, T90 and clearance are measured from the simulation start to the first recorded event reaching each threshold.',"割合の分母は、記録全体で実際に入場した歩行者数です。誘導員は別に数えます。T50、T90、全員完了時間は、シミュレーション開始から各人数に初めて達した記録時刻までの時間です。"],
+  means:['人均用时从每人入场算到其完成。平均通行量为入场人数除以全员完成时间。两项均须全员完成。横线表示未达到、条件不同或分母为零。','Individual time starts at each person’s admission. Mean discharge is the admitted count divided by clearance time. Both require full completion. A dash marks an unreached threshold, unmatched conditions or a zero denominator.',"個人の避難時間はその人の入場から完了までです。平均流出率は入場者数を全員完了時間で割った値です。どちらも全員が完了した場合のみ算出します。横線は未達、条件の不一致、または分母がゼロであることを示します。"],
+  interpretation:['时间相对差为 (B − A) / A × 100%。负值表示 B 用时更短。完成率之差用百分点。每列是一个演示运行，接触提示按该记录的身体检查显示。','Relative time change is (B − A) / A × 100%. Negative values mean B took less time. Completion-rate differences use percentage points. Each column is one demonstration run, with its own body-contact checks.',"時間の相対差は (B − A) / A × 100% です。負の値は B の所要時間が短いことを表します。完了率の差はパーセントポイントで示します。各列は1回のデモの結果で、身体接触の警告もその記録に基づきます。"],
+  measured:['本场景按进入安全区的记录时刻计数。','This scene counts observed arrivals in a safe area.',"このシナリオでは、安全区域への到達が記録された時刻で集計します。"],sampled:['本场景按回放中行人离场的首帧计时，精度受采样间隔影响。','This scene uses the first replay frame after a pedestrian leaves. Timing has the resolution of the recording.',"このシナリオでは、歩行者の退場直後の最初のフレームを使います。時間の精度は記録のサンプリング間隔に依存します。"],
+  time:['仿真时间（秒）','Simulation time (s)',"シミュレーション時間（秒）"],metric:['指标','Measure',"指標"],
 };
-const label=(key,lang)=>strings[key][lang==='zh'?0:1];
+const label=(key,lang)=>strings[key][lang==='zh'?0:lang==='ja'?2:1];
 const $=id=>document.getElementById(id);
 const node=(name,text)=>{const x=document.createElement(name);if(text!=null)x.textContent=text;return x;};
 const signed=(v,d=1)=>v==null?'—':(v>0?'+':'')+v.toFixed(d);
