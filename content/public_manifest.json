@@ -66,8 +66,8 @@
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.css",
           "target": "demos/evacuation-atlas/assets/atlas.css",
-          "bytes": 15313,
-          "sha256": "b6ab95c4c8cae1be581b60009258448586a2d706f4a2814ade7fbbea96ddf00b"
+          "bytes": 15333,
+          "sha256": "286d29cf9a694162c634337b43ff34bc066463e540377105379535c45deaeeb3"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.js",
