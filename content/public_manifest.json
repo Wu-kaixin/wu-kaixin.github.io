@@ -66,14 +66,14 @@
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.css",
           "target": "demos/evacuation-atlas/assets/atlas.css",
-          "bytes": 15333,
-          "sha256": "286d29cf9a694162c634337b43ff34bc066463e540377105379535c45deaeeb3"
+          "bytes": 15856,
+          "sha256": "c4bf84cf34ba5b68e00378d8619f8ce7f07201a1a7c1baa63fe7511e89c56ced"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/atlas.js",
           "target": "demos/evacuation-atlas/assets/atlas.js",
-          "bytes": 24641,
-          "sha256": "3e1c396613378f2f1ff45fbef77cbd2ccb3e4fd5df5466cd9ac51af3044973f4"
+          "bytes": 24807,
+          "sha256": "7978856a7845390c7d480d7af4956f12b39f0f549b47dcd2278018006e8b53c0"
         },
         {
           "source": "site/demos/evacuation-atlas/assets/atrium.svg",
@@ -1272,8 +1272,8 @@
         {
           "source": "site/demos/evacuation-atlas/index.html",
           "target": "demos/evacuation-atlas/index.html",
-          "bytes": 5492,
-          "sha256": "8257f613630e2512da0ba0de98856f7e9a3bc84b4910803e36f8e6f57885078b"
+          "bytes": 5560,
+          "sha256": "bffa09e0a8323c7d447f745aa45a3b1fda6d86d578057f5e724b115d061969a8"
         }
       ],
       "project_id": "crowds",

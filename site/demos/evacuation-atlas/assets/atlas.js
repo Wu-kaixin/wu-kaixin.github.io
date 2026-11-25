@@ -58,7 +58,8 @@ function setWords(){
   document.querySelectorAll('[data-tip]').forEach(n=>{n.title=w(n.dataset.tip);n.setAttribute('aria-label',n.title);});
   document.querySelectorAll('[data-mode]').forEach(n=>n.setAttribute('aria-pressed',String(n.dataset.mode===mode)));
   for(const [id,key] of [['modes','views'],['map-a','map'],['map-b','modelB'],['timeline','timeline'],['speed','speed'],['camera','camera'],['scene','scene'],['model','modelA'],['model-b','modelB'],['floor','floor'],['revision','revision']])$(id).setAttribute('aria-label',w(key));
-  $('home').setAttribute('aria-label','Atrium 100 · '+w('atlas'));$('lang').value=lang;
+  $('home').setAttribute('aria-label','Atrium 100 · '+w('atlas'));
+  for(const button of $('lang').children)button.setAttribute('aria-pressed',String(button.lang===lang));
   $('model').setAttribute('aria-label',w(mode==='compare'?'modelA':'model'));
   fullscreenLabel();
   $('lang').setAttribute('aria-label',{zh:'选择语言',en:'Select language',ja:'言語を選択'}[lang]);
@@ -275,7 +276,7 @@ function bind(){
   $('layout').onclick=()=>{const values=eligible().filter(c=>c.model===model&&(mode!=='compare'||eligible().some(b=>b.layout===c.layout&&b.model===modelB))).map(c=>c.layout);layout=values[(values.indexOf(layout)+1)%values.length];revision='';load();};
   $('floor').onchange=e=>{floor=e.target.value;resetView();populate();invalidate();};
   $('camera').onchange=e=>{camera=e.target.value;Object.assign(view,{dx:0,dy:0,z:camera==='all'?1:2.3});invalidate();};
-  $('lang').onchange=e=>{lang=e.target.value;const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u);populate();if(loadError)$('message').textContent=w('failure');else if(!tracks.length)$('message').textContent=w('loading');invalidate();};
+  $('lang').onclick=e=>{const next=e.target.closest('button')?.lang;if(!languages.includes(next)||next===lang)return;lang=next;const u=new URL(location.href);u.searchParams.set('lang',lang);history.replaceState(null,'',u);populate();if(loadError)$('message').textContent=w('failure');else if(!tracks.length)$('message').textContent=w('loading');invalidate();};
   $('layers').onclick=()=>{const open=$('layer-sheet').hidden;$('layer-sheet').hidden=!open;$('layers').setAttribute('aria-expanded',String(open));};
   document.addEventListener('click',e=>{if(!e.target.closest('#layers,#layer-sheet'))closeLayers();});
   $('help').onclick=()=>$('info').showModal();$('close').onclick=()=>$('info').close();
